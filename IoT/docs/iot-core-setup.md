@@ -18,8 +18,8 @@ The ANZ IoT policy allows devices to connect and publish data without ClientID v
             ],
             "Resource": [
                 "arn:aws:iot:ap-southeast-2:881490097605:client/*",
-                "arn:aws:iot:ap-southeast-2:881490097605:topic/livesense/poc/*/ANZlab",
-                "arn:aws:iot:ap-southeast-2:881490097605:topicfilter/livesense/poc/*/ANZlab"
+                "arn:aws:iot:ap-southeast-2:881490097605:topic/bestsense/poc/*/ANZlab",
+                "arn:aws:iot:ap-southeast-2:881490097605:topicfilter/bestsense/poc/*/ANZlab"
             ]
         }
     ]

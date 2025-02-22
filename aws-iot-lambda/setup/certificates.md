@@ -82,6 +82,7 @@ Located in iam/iot-policy.json:
 
 
 
+
 ## Lambda Role
 Located in iam/lambda-role.json:
 {

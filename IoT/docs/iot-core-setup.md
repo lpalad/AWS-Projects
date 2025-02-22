@@ -26,6 +26,8 @@ The ANZ IoT policy allows devices to connect and publish data without ClientID v
 }
 
 
+### CLI Commands
+ 
 # Create policy
 aws iot create-policy \
     --policy-name "ANZpoclab" \

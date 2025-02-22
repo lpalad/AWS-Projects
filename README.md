@@ -18,7 +18,7 @@ This repository contains a collection of AWS projects, demonstrations, and tutor
 *(Coming Soon)*
 
 ### IoT
-*(Coming Soon)*
+(https://github.com/lpalad/AWS-Projects/tree/main/IoT)
 
 ### Database
 *(Coming Soon)*

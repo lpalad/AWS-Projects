@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  title: District Data API
+  version: 1.0.0
+paths:
+  /readings:
+    get:
+      summary: Get sensor readings
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    deviceId:
+                      type: string
+                    timestamp:
+                      type: number
+                    raw_data:
+                      type: object

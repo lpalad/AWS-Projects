@@ -73,5 +73,42 @@ fetch('https://YOUR_API_ENDPOINT/prod/readings')
     .catch(error => console.error('Error:', error));
 
 
-![image](https://github.com/user-attachments/assets/233fa1dc-9835-45d9-aa4a-bf2013430863)
+https://prnt.sc/2Q8uAq4XFJFT
+
+https://prnt.sc/Jc4eLCk8B4LO
+
+API Issues
+CORS configuration
+Lambda permissions
+DynamoDB access
+Response format
+
+Monitoring and Debugging
+CloudWatch Logs
+IoT Core logs
+Lambda function logs
+API Gateway logs
+
+
+DynamoDB Monitoring
+Item count
+Read/Write capacity
+Error rates
+Latency metrics
+
+
+Performance Testing
+Recommended Test Scenarios
+Single device continuous transmission
+Multiple device concurrent transmission
+Varied message intervals
+Error condition handling
+
+
+Load Testing Parameters
+Message frequency: 15 seconds
+Concurrent devices: 3+
+Data points per message: 26 sensors
+Test duration: Minimum 1 hour
+
 

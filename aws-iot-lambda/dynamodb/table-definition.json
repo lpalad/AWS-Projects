@@ -1,0 +1,18 @@
+# 1. File: dynamodb/table-definition.json
+```json
+{
+    "TableName": "district_data",
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "id",
+            "AttributeType": "S"
+        }
+    ],
+    "KeySchema": [
+        {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+        }
+    ],
+    "BillingMode": "PAY_PER_REQUEST"
+}

@@ -4,7 +4,7 @@
 When your entire business runs on a single server, you're one crash away from disaster. This lab implements a fault-tolerant, auto-scaling infrastructure that eliminates single points of failure - the same solution Fortune 500 companies pay consultants $250,000+ to implement.
 
 ## Architecture
-```ascii
+ascii
                    AWS Cloud
 ┌──────────────────────────────────────────┐
 │  VPC (10.0.0.0/16)                      │
@@ -18,6 +18,8 @@ When your entire business runs on a single server, you're one crash away from di
 │  │          S3 Website               │  │
 │  └────────────────────────────────────┘  │
 └──────────────────────────────────────────┘
+
+
 Project Structure
 aws-devops-journey/
 ├── infrastructure/

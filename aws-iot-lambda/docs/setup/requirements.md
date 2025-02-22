@@ -23,6 +23,7 @@ DynamoDB table configuration:
 - Partition key: id (String)
 - Billing mode: PAY_PER_REQUEST
 ## Message Requirements
+
 Message format must follow:
 {
     "cri": [NUMBER],
@@ -33,8 +34,3 @@ Message format must follow:
     ],
     "ts": [TIMESTAMP]
 }
-Created: February 2025
-Author: Leonard Palad
-Blog site: https://aws.leonardspalad.com/
-LinkedIn: https://www.linkedin.com/in/leonardspalad/
-****

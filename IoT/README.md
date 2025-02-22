@@ -36,7 +36,7 @@ Sensor data format:
 
 
 
-**Sensor Mapping**
+## Sensor Mapping**
 Name	RelativeID
 Flow (L/min)	1
 PM1 (µg/m3)	2
@@ -45,7 +45,7 @@ PM1 1-Hour Average	4
 [Complete mapping table in implementation details]
 
 
-**Lambda Functions**
+## Lambda Functions**
 ANZ-PoC: Processes incoming IoT data
 mobile-ANZ-poc: Serves API requests
 5. API Gateway
@@ -54,29 +54,31 @@ Supports CORS
 Public GET endpoint
 
 
-**Implementation Steps**
+## Implementation Steps**
 IoT Core Setup
-bash
-# Create IoT Policy
+
+
+
+## Create IoT Policy
 aws iot create-policy \
     --policy-name "ANZpoclab" \
     --policy-document file://ANZpoclab-policy.json
 
 Lambda Setup
-bash
-# Create Lambda function
+ 
+##  Create Lambda function
 aws lambda create-function \
     --function-name "ANZ-PoC" \
     --runtime python3.9 \
     [Additional parameters in implementation details]
 
-**API Gateway Setup**
-# Create REST API
+## API Gateway Setup**
+## Create REST API
 aws apigateway create-rest-api \
     --name "ANZ-poc-api" \
     --description "API for ANZ PoC mobile access"
 
-**Testing**
+## Testing**
 MQTT Test Client
 MQTTX Application
 API Endpoint Testing

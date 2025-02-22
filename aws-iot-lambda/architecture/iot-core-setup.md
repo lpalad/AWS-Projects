@@ -7,16 +7,16 @@ The IoT Core implementation handles MQTT message ingestion from sensor devices, 
 - Protocol: MQTT over TLS
 - Port: 8883 (standard MQTT TLS)
 ### Message Topics
-- Base Topic: livesense/poc/[DEVICE_ID]/airmetlab
+- Base Topic: liveaide/poc/[DEVICE_ID]/district
 - Format: Device IDs follow pattern ER[NUMBER]
-- Example: livesense/poc/ER1024007/airmetlab
+- Example: liveaide/poc/ER1024007/district
 ### Device Authentication
 - X.509 certificate-based authentication
 - Client certificates managed through AWS IoT Core
 - No client ID restrictions implemented
 ### Message Routing
 - IoT Rules process incoming MQTT messages
-- SQL Query: SELECT * FROM 'livesense/poc/+/airmetlab'
+- SQL Query: SELECT * FROM 'liveaide/poc/+/district'
 - Direct Lambda integration for processing
 ## Data Flow
 1. Device publishes to MQTT topic

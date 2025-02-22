@@ -102,9 +102,9 @@ Historical data analysis
 
 Author
 Leonard Palad
-
 Blog: https://aws.leonardspalad.com/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
+
 License
 This project is licensed under the MIT License - see the LICENSE file for details
 

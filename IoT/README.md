@@ -72,7 +72,7 @@ aws lambda create-function \
 **API Gateway Setup**
 
 # Create REST API
-```bash
+
 aws apigateway create-rest-api \
     --name "ANZ-api" \
     --description "API for ANZ PoC mobile access"

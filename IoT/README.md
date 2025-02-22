@@ -22,7 +22,7 @@ This project implements an automated air quality monitoring system using AWS IoT
 
 ### 2. Data Structure
 Sensor data format:
-```json
+
 {
     "cri": 60448,
     "mt": 0,

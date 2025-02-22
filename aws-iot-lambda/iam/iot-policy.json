@@ -1,6 +1,7 @@
 # IoT Core Policy
+
 ## File: iam/iot-policy.json
-```json
+
 {
     "Version": "2012-10-17",
     "Statement": [

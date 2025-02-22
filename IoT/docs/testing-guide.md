@@ -65,7 +65,7 @@ bash
 curl https://YOUR_API_ENDPOINT/prod/readings
 
 
-Using Web Browser
+**Using Web Browser**
 javascript
 fetch('https://YOUR_API_ENDPOINT/prod/readings')
     .then(response => response.json())
@@ -73,39 +73,51 @@ fetch('https://YOUR_API_ENDPOINT/prod/readings')
     .catch(error => console.error('Error:', error));
 
 
-https://prnt.sc/2Q8uAq4XFJFT
+**End-to-End Testing Checklist**
 
-https://prnt.sc/Jc4eLCk8B4LO
+**Device Simulation**
+ Certificate setup correct
+ Topics match expected format
+ Data structure validates
+ Message interval appropriate
 
-API Issues
+
+**Data Flow Verification**
+Device → IoT Core
+IoT Rule → Lambda
+Lambda → DynamoDB
+API → Web Access
+
+
+**API Issues**
 CORS configuration
 Lambda permissions
 DynamoDB access
 Response format
 
-Monitoring and Debugging
-CloudWatch Logs
+**Monitoring and Debugging**
+**CloudWatch Logs**
 IoT Core logs
 Lambda function logs
 API Gateway logs
 
 
-DynamoDB Monitoring
+**DynamoDB Monitoring**
 Item count
 Read/Write capacity
 Error rates
 Latency metrics
 
 
-Performance Testing
-Recommended Test Scenarios
+**Performance Testing**
+**Recommended Test Scenarios**
 Single device continuous transmission
 Multiple device concurrent transmission
 Varied message intervals
 Error condition handling
 
 
-Load Testing Parameters
+**Load Testing Parameters**
 Message frequency: 15 seconds
 Concurrent devices: 3+
 Data points per message: 26 sensors

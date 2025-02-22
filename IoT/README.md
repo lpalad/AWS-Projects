@@ -77,11 +77,15 @@ aws apigateway create-rest-api \
 --name "ANZ-api" \
 --description "API for ANZ PoC mobile access"
 
+
+
 Testing
 MQTT Test Client
 MQTTX Application
 API Endpoint Testing
 Python Simulator Scripts
+
+
 
 Security Considerations
 Certificate-based device authentication
@@ -89,11 +93,17 @@ Public API endpoint considerations
 DynamoDB access controls
 AWS IAM roles and policies
 
+
+
+
 Future Enhancements
 API authentication
 Enhanced data visualization
 Additional sensor support
 Historical data analysis
+
+
+
 
 Requirements
 AWS Account
@@ -102,6 +112,8 @@ Python 3.9+
 Required Python packages:
 awsiotsdk
 boto3
+
+
 
 
 
@@ -114,10 +126,15 @@ project/
 ├── certificates/
 └── docs/
 
+
+
+
 Author
 Leonard Palad
 
 Blog: https://aws.leonardspalad.com/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
+
+
 License
 This project is licensed under the MIT License - see the LICENSE file for details

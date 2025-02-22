@@ -8,7 +8,8 @@ This repository contains a collection of AWS projects, demonstrations, and tutor
 ## Categories
 
 ### CI/CD
-- [GitHub S3 Sync](./CI-CD/github-s3-sync/) - Automated website deployment using GitHub Actions and S3
+- [GitHub S3 Sync](./CI-CD/github-s3-sync/) -
+-   Automated website deployment using GitHub Actions and S3
   - GitHub Actions workflow
   - S3 static website hosting
   - Secure credential management
@@ -19,6 +20,11 @@ This repository contains a collection of AWS projects, demonstrations, and tutor
 
 ### IoT
 (https://github.com/lpalad/AWS-Projects/tree/main/IoT)
+- IoT Core (Broker) setup
+- Lambda Functions
+- DynamoDB Table
+- API Gateway Integration
+- Testing
 
 ### Database
 *(Coming Soon)*

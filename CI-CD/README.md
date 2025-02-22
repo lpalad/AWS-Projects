@@ -26,3 +26,9 @@ All sensitive information has been removed. Remember to:
 - Replace placeholder values
 - Follow AWS security best practices
 - Adapt configurations to your environment
+
+Author
+Leonard S Palad
+
+LinkedIn: https://www.linkedin.com/in/leonardspalad/
+Blog: https://aws.leonardspalad.com/

@@ -72,36 +72,39 @@ aws lambda create-function \
 **API Gateway Setup**
 
 # Create REST API
+```bash
 aws apigateway create-rest-api \
     --name "ANZ-api" \
-    --description "API for Airmet PoC mobile access"
+    --description "API for ANZ PoC mobile access"
 
-
-**Testing**
+Testing
 MQTT Test Client
 MQTTX Application
 API Endpoint Testing
 Python Simulator Scripts
 
-**Security Considerations**
+Security Considerations
 Certificate-based device authentication
 Public API endpoint considerations
 DynamoDB access controls
 AWS IAM roles and policies
 
-**Future Enhancements**
+Future Enhancements
 API authentication
 Enhanced data visualization
 Additional sensor support
 Historical data analysis
 
-**Requirements**
+Requirements
 AWS Account
 AWS CLI configured
 Python 3.9+
 Required Python packages:
 awsiotsdk
 boto3
+
+
+
 Directory Structure
 
 project/
@@ -111,12 +114,10 @@ project/
 ├── certificates/
 └── docs/
 
-
-**Author**
+Author
 Leonard Palad
+
 Blog: https://aws.leonardspalad.com/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
-
-**License**
+License
 This project is licensed under the MIT License - see the LICENSE file for details
-

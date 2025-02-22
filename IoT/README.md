@@ -64,7 +64,7 @@ Lambda Setup
 
 # Create Lambda function
 aws lambda create-function \
-    --function-name "Air-met-PoC" \
+    --function-name "ANZ-PoC" \
     --runtime python3.9 \
     [Additional parameters in implementation details]
 
@@ -73,7 +73,7 @@ aws lambda create-function \
 
 # Create REST API
 aws apigateway create-rest-api \
-    --name "airmet-poc-api" \
+    --name "ANZ-api" \
     --description "API for Airmet PoC mobile access"
 
 

@@ -20,6 +20,7 @@ ascii
 └──────────────────────────────────────────┘
 
 
+
 Project Structure
 aws-devops-journey/
 ├── infrastructure/
@@ -45,13 +46,13 @@ terraform plan -out=tfplan
 terraform apply tfplan
 
 
-Prerequisites
+**Prerequisites**
 AWS Account
 Terraform installed
 AWS CLI configured
 
 
-Core Components
+**Core Components**
 VPC with proper networking
 Application Load Balancer for traffic distribution
 Multi-AZ deployment for high availability
@@ -59,22 +60,19 @@ S3 static website hosting
 Security groups and access controls
 
 
-Security Implementation
+**Security Implementation**
 Configured security groups
 S3 bucket policies
 Network access controls
 
 
-Cost Optimization
+**Cost Optimization**
 Auto-scaling based on demand
 Pay-per-use model
 Resource optimization
 
 
-Support
-Create an issue in this repository for any questions or problems.
-
-Author
+**Author**
 Leonard S Palad
 
 LinkedIn: https://www.linkedin.com/in/leonardspalad/

@@ -1,7 +1,14 @@
 # Infrastructure Monitoring Guide
+Location: /docs/operations/monitoring.md
 
 ## Overview
 This document outlines the comprehensive monitoring setup across both regions (Sydney and Oregon) for infrastructure, applications, and databases.
+
+## File Location
+This document is part of the following structure:
+- /docs/operations/monitoring.md
+- Part of aws-multi-region-ha repository
+- Operations documentation section
 
 ## CloudWatch Implementation
 ### Metrics Configuration

@@ -34,3 +34,11 @@ Message format must follow:
     ],
     "ts": [TIMESTAMP]
 }
+
+
+
+
+Created: February 2025
+Author: Leonard Palad
+Blog site: https://aws.leonardspalad.com/
+LinkedIn: https://www.linkedin.com/in/leonardspalad/

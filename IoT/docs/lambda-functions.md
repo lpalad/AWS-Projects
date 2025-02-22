@@ -122,3 +122,36 @@ def lambda_handler(event, context):
             'statusCode': 500,
             'body': json.dumps(str(e))
         }
+
+
+
+Deployment Commands
+# Create zip package
+zip mobile-ANZ-poc.zip mobile-ANZ-poc.py
+
+# Create Lambda function
+aws lambda create-function \
+    --function-name "mobile-ANZ-poc" \
+    --runtime python3.9 \
+    --handler mobile-ANZ-poc.lambda_handler \
+    --role arn:aws:iam::881490097605:role/ANZpoclab-lambda-role \
+    --zip-file fileb://mobile-ANZ-poc.zip
+
+
+IAM Role Setup
+Both Lambda functions use the same IAM role with permissions for:
+
+CloudWatch Logs
+DynamoDB access
+IoT Core integration
+
+
+Role Creation Commands
+# Create role and attach policies [Details in IAM documentation]
+aws iam create-role \
+    --role-name ANZpoclab-lambda-role \
+    --assume-role-policy-document file://trust-policy.json
+
+
+
+

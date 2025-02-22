@@ -1,11 +1,10 @@
-AWS IoT Core - ANZ Air Quality Monitoring System
-Overview
+#AWS IoT Core - ANZ Air Quality Monitoring System
+#Overview
 This project implements an automated air quality monitoring system using AWS IoT Core and serverless services. The system collects and processes real-time sensor data from multiple devices measuring various air quality parameters including particulate matter (PM) and total suspended particles (TSP).
 
-Architecture
-[Architecture Diagram - Coming Soon]
+ 
 
-AWS Services Used
+#AWS Services Used
 AWS IoT Core (MQTT Broker)
 AWS Lambda
 Amazon DynamoDB

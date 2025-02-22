@@ -85,29 +85,31 @@ API Endpoint Testing
 Python Simulator Scripts
 
 
-### Security Considerations 
-Certificate-based device authentication
-Public API endpoint considerations
-DynamoDB access controls
-AWS IAM roles and policies
+## Security Considerations
+- Certificate-based device authentication
+- Public API endpoint considerations
+- DynamoDB access controls
+- AWS IAM roles and policies
 
+## Future Enhancements
+- API authentication
+- Enhanced data visualization
+- Additional sensor support
+- Historical data analysis
 
-### Future Enhancements 
-API authentication
-Enhanced data visualization
-Additional sensor support
-Historical data analysis
+## Requirements
+- AWS Account
+- AWS CLI configured
+- Python 3.9+
+- Required Python packages:
+  - awsiotsdk
+  - boto3
 
-### Requirements 
-
-
-
-Author
+## Author
 Leonard Palad
-Blog: https://aws.leonardspalad.com/
-LinkedIn: https://www.linkedin.com/in/leonardspalad/
+- Blog: https://aws.leonardspalad.com/
+- LinkedIn: https://www.linkedin.com/in/leonardspalad/
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details
-
 

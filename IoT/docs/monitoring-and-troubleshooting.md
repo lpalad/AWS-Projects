@@ -147,9 +147,11 @@ aws cloudwatch put-metric-alarm \
     --comparison-operator GreaterThanThreshold \
     --evaluation-periods 1 \
     --alarm-actions "YOUR_SNS_TOPIC_ARN"
+
+
 Health Check Script (Python)
-python
-Copy
+
+
 import boto3
 import json
 
@@ -174,7 +176,7 @@ def check_health():
     # Additional health checks...
 
 
-Recovery Procedures
+**Recovery Procedures**
 Certificate Recovery
 Generate new certificate
 Update device configuration
@@ -182,14 +184,14 @@ Revoke old certificate
 Verify connection
 
 
-Data Recovery
+**Data Recovery**
 Check DynamoDB backups
 Verify data integrity
 Restore if necessary
 Validate recovered data
 
 
-Maintenance Tasks
+**Maintenance Tasks**
 Regular Checks
 Certificate expiration
 Policy permissions
@@ -197,7 +199,7 @@ Lambda function logs
 DynamoDB capacity
 API Gateway metrics
 
-Monthly Tasks
+**Monthly Tasks**
 Review CloudWatch logs
 Check error rates
 Update monitoring thresholds

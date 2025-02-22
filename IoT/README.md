@@ -24,14 +24,14 @@ This project implements an automated air quality monitoring system using AWS IoT
 Sensor data format:
 
 {
-    "cri": 60448,
+    "devid": 987562,
     "mt": 0,
     "sc": 26,
     "sv": [
         {"oc": 0, "sri": 1, "v": 2.5},    // Flow Rate
         {"oc": 0, "sri": 2, "v": 15.3}    // PM1
     ],
-    "ts": 1738022940000
+    "ts": 1740189740
 }
 
 
@@ -43,7 +43,7 @@ PM1 15-Minute Average	3
 PM1 1-Hour Average	4
 [Complete mapping table in implementation details]
 
-4. Lambda Functions
+**4. Lambda Functions**
 Air-met-PoC: Processes incoming IoT data
 mobile-airmet-poc: Serves API requests
 5. API Gateway
@@ -53,6 +53,7 @@ Public GET endpoint
 Implementation Steps
 IoT Core Setup
 bash
+
 # Create IoT Policy
 aws iot create-policy \
     --policy-name "airmetpoclab" \
@@ -68,7 +69,7 @@ aws lambda create-function \
     [Additional parameters in implementation details]
 
 
-API Gateway Setup
+**API Gateway Setup**
 
 # Create REST API
 aws apigateway create-rest-api \
@@ -76,22 +77,25 @@ aws apigateway create-rest-api \
     --description "API for Airmet PoC mobile access"
 
 
-Testing
+**Testing**
 MQTT Test Client
 MQTTX Application
 API Endpoint Testing
 Python Simulator Scripts
-Security Considerations
+
+**Security Considerations**
 Certificate-based device authentication
 Public API endpoint considerations
 DynamoDB access controls
 AWS IAM roles and policies
-Future Enhancements
+
+**Future Enhancements**
 API authentication
 Enhanced data visualization
 Additional sensor support
 Historical data analysis
-Requirements
+
+**Requirements**
 AWS Account
 AWS CLI configured
 Python 3.9+
@@ -108,11 +112,11 @@ project/
 └── docs/
 
 
-Author
+**Author**
 Leonard Palad
-
 Blog: https://aws.leonardspalad.com/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
-License
+
+**License**
 This project is licensed under the MIT License - see the LICENSE file for details
 

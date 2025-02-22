@@ -19,12 +19,12 @@ This repository contains a collection of AWS projects, demonstrations, and tutor
 *(Coming Soon)*
 
 ### IoT
-(https://github.com/lpalad/AWS-Projects/tree/main/IoT)
+[AWS IoT Core - ANZ Air Quality Monitoring](https://github.com/lpalad/AWS-Projects/tree/main/IoT)
 - IoT Core (Broker) setup
 - Lambda Functions
-- DynamoDB Table
-- API Gateway Integration
-- Testing
+- DynamoDB Integration
+- API Gateway
+- Testing Procedures
 
 ### Database
 *(Coming Soon)*

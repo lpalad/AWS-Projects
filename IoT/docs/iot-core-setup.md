@@ -26,27 +26,26 @@ The ANZ IoT policy allows devices to connect and publish data without ClientID v
 }
 
 
-### CLI Commands
- 
 # Create policy
 aws iot create-policy \
-    --policy-name "ANZpoclab" \
-    --policy-document file://ANZpoclab-policy.json
+  --policy-name "ANZpoclab" \
+  --policy-document file://ANZpoclab-policy.json
 
 # Create certificates
 aws iot create-keys-and-certificate \
-    --set-as-active \
-    --certificate-pem-outfile "ANZpoc-cert.pem" \
-    --public-key-outfile "ANZpoc-public.key" \
-    --private-key-outfile "ANZpoc-private.key"
+  --set-as-active \
+  --certificate-pem-outfile "ANZpoc-cert.pem" \
+  --public-key-outfile "ANZpoc-public.key" \
+  --private-key-outfile "ANZpoc-private.key"
 
 # Attach policy to certificate
 aws iot attach-policy \
-    --policy-name "ANZpoclab" \
-    --target "CERTIFICATE_ARN"
+  --policy-name "ANZpoclab" \
+  --target "CERTIFICATE_ARN"
 
 
 Topic Structure
-Base Topic: bestense/poc/*/ANZlab
+
+Base Topic: bestsense/poc/*/ANZlab
 Supports multiple device IDs
 Example: best/poc/ER1024007/ANZlab

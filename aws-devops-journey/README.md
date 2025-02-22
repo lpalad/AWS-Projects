@@ -1,4 +1,4 @@
-# AWS High-Availability Infrastructure Lab
+# AWS High-Availability Infrastructure Lab 
 
 ## The Problem We're Solving
 When your entire business runs on a single server, you're one crash away from disaster. This lab implements a fault-tolerant, auto-scaling infrastructure that eliminates single points of failure - the same solution Fortune 500 companies pay consultants $250,000+ to implement.

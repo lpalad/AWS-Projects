@@ -56,16 +56,16 @@ bash
 
 # Create IoT Policy
 aws iot create-policy \
-    --policy-name "airmetpoclab" \
-    --policy-document file://airmetpoclab-policy.json
+--policy-name "airmetpoclab" \
+--policy-document file://airmetpoclab-policy.json
 
 
 Lambda Setup
 
 # Create Lambda function
 aws lambda create-function \
-    --function-name "ANZ-PoC" \
-    --runtime python3.9 \
+--function-name "ANZ-PoC" \
+--runtime python3.9 \
     [Additional parameters in implementation details]
 
 
@@ -74,8 +74,8 @@ aws lambda create-function \
 # Create REST API
 
 aws apigateway create-rest-api \
-    --name "ANZ-api" \
-    --description "API for ANZ PoC mobile access"
+--name "ANZ-api" \
+--description "API for ANZ PoC mobile access"
 
 Testing
 MQTT Test Client

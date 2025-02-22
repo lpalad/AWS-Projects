@@ -32,18 +32,14 @@ cd aws-iot-lambda
 3. Deploy the solution
   
 ## Documentation
-- [Architecture](docs/architecture/iot-core-setup.md)
-  - IoT Core setup and configuration
-  - Message flow and routing
-  - Security implementation
-- [Setup](docs/setup/)
-  - [Requirements](docs/setup/requirements.md)
-  - [Certificates](docs/setup/certificates.md)
-  - [Policy Setup](docs/setup/policy-setup.md)
-- [Operations](docs/operations/)
-  - [Message Format](docs/operations/message-format.md)
-  - [Monitoring](docs/operations/monitoring.md)
-  - [Troubleshooting](docs/operations/troubleshooting.md)
+- [Architecture](./docs/architecture/iot-core-setup.md)
+- [Setup Requirements](./docs/setup/requirements.md)
+- [Certificate Setup](./docs/setup/certificates.md)
+- [Policy Setup](./docs/setup/policy-setup.md)
+- [Message Format](./docs/operations/message-format.md)
+- [Monitoring](./docs/operations/monitoring.md)
+- [Troubleshooting](./docs/operations/troubleshooting.md)
+
 ## Security
 - All IoT devices require valid certificates
 - Lambda functions use least-privilege permissions

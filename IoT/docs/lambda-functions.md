@@ -87,7 +87,7 @@ aws lambda create-function \
     --function-name "ANZ-PoC" \
     --runtime python3.9 \
     --handler ANZ-PoC.lambda_handler \
-    --role arn:aws:iam::881490097605:role/ANZpoclab-lambda-role \
+    --role arn:aws:iam::XXXXXXXXXXX:role/ANZpoclab-lambda-role \
     --zip-file fileb://ANZ-PoC.zip
 
 
@@ -134,7 +134,7 @@ aws lambda create-function \
     --function-name "mobile-ANZ-poc" \
     --runtime python3.9 \
     --handler mobile-ANZ-poc.lambda_handler \
-    --role arn:aws:iam::881490097605:role/ANZpoclab-lambda-role \
+    --role arn:aws:iam::XXXXXXXXXXXX:role/ANZpoclab-lambda-role \
     --zip-file fileb://mobile-ANZ-poc.zip
 
 

@@ -30,7 +30,6 @@ This repository documents the implementation of a highly available, multi-region
 - `/docs/setup/` - Implementation guides
 - `/docs/operations/` - Operational procedures
 - `/diagrams/` - Infrastructure diagrams
-- `/scripts/` - Implementation scripts
 
 ## Security Considerations
 - Token-based API authentication

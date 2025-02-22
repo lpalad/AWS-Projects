@@ -42,6 +42,7 @@ cd aws-iot-lambda
 - [Troubleshooting](./operations/troubleshooting.md)
 
 
+
 ## Security
 - All IoT devices require valid certificates
 - Lambda functions use least-privilege permissions

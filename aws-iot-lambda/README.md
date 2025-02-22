@@ -30,11 +30,20 @@ cd aws-iot-lambda
 - Follow docs/setup/certificates.md for IoT device setup
 - Review docs/setup/policy-setup.md for IAM configuration
 3. Deploy the solution
+  
 ## Documentation
-- Architecture Overview (docs/architecture/iot-core-setup.md)
-- Setup Guide (docs/setup/requirements.md)
-- Operations Guide (docs/operations/monitoring.md)
-- Troubleshooting (docs/operations/troubleshooting.md)
+- [Architecture](docs/architecture/iot-core-setup.md)
+  - IoT Core setup and configuration
+  - Message flow and routing
+  - Security implementation
+- [Setup](docs/setup/)
+  - [Requirements](docs/setup/requirements.md)
+  - [Certificates](docs/setup/certificates.md)
+  - [Policy Setup](docs/setup/policy-setup.md)
+- [Operations](docs/operations/)
+  - [Message Format](docs/operations/message-format.md)
+  - [Monitoring](docs/operations/monitoring.md)
+  - [Troubleshooting](docs/operations/troubleshooting.md)
 ## Security
 - All IoT devices require valid certificates
 - Lambda functions use least-privilege permissions

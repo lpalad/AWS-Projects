@@ -62,5 +62,5 @@ For support:
 - Contact project maintainers
 Created: February 2025
 Author: Leonard Palad
-Blog site: https://aws.leonardspalad.com/
+Blog site: https://www.cloudhermit.com.au/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/

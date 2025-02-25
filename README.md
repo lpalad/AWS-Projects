@@ -52,7 +52,7 @@ Related blog posts can be found at: https://aws.leonardspalad.com/
 ## Author
 Leonard S Palad
 - LinkedIn: https://www.linkedin.com/in/leonardspalad/
-- Blog: https://aws.leonardspalad.com/
+- Blog: https://www.cloudhermit.com.au/
 
 ## Updates
 - February 2025: Added CI/CD pipeline with GitHub Actions and S3

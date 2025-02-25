@@ -31,4 +31,4 @@ Author
 Leonard S Palad
 
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
-Blog: https://aws.leonardspalad.com/
+Blog: https://www.cloudhermit.com.au/

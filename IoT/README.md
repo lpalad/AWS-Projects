@@ -132,7 +132,7 @@ project/
 Author
 Leonard Palad
 
-Blog: https://aws.leonardspalad.com/
+Blog: https://www.cloudhermit.com.au/
 LinkedIn: https://www.linkedin.com/in/leonardspalad/
 
 

@@ -47,8 +47,7 @@ This pattern is widely used in:
 5. Even during massive traffic spikes or backend slowdowns, no data is lost
 
 ## License
-
-MIT
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 Author
 Leonard S Palad

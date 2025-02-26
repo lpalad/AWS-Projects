@@ -1,0 +1,1 @@
+# Processor Lambda (SQS → DynamoDB)

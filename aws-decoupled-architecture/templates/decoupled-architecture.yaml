@@ -1,0 +1,215 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Serverless Decoupled Architecture with Lambda, SQS, and DynamoDB'
+
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: dev
+    Description: Environment name (dev, staging, prod)
+    
+  QueueVisibilityTimeout:
+    Type: Number
+    Default: 65
+    Description: SQS queue visibility timeout in seconds
+    
+  LambdaMemorySize:
+    Type: Number
+    Default: 128
+    Description: Memory allocation for Lambda functions (MB)
+    
+  LambdaTimeout:
+    Type: Number
+    Default: 30
+    Description: Lambda function timeout in seconds
+
+Resources:
+  # SQS Queue for message buffering
+  OrderProcessingQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub "${EnvironmentName}-order-processing-queue"
+      VisibilityTimeout: !Ref QueueVisibilityTimeout
+      MessageRetentionPeriod: 1209600  # 14 days
+      
+  # DynamoDB Table for order storage
+  OrdersTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${EnvironmentName}-orders"
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: order_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: order_id
+          KeyType: HASH
+          
+  # IAM Role for Lambda functions
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: LambdaSQSDynamoPermissions
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sqs:SendMessage
+                  - sqs:ReceiveMessage
+                  - sqs:DeleteMessage
+                  - sqs:GetQueueAttributes
+                Resource: !GetAtt OrderProcessingQueue.Arn
+              - Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                  - dynamodb:GetItem
+                  - dynamodb:UpdateItem
+                  - dynamodb:DeleteItem
+                  - dynamodb:Query
+                Resource: !GetAtt OrdersTable.Arn
+  
+  # Lambda function for receiving orders
+  ReceiverFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "${EnvironmentName}-order-receiver"
+      Runtime: python3.9
+      Handler: receiver.lambda_handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      MemorySize: !Ref LambdaMemorySize
+      Timeout: !Ref LambdaTimeout
+      Environment:
+        Variables:
+          QUEUE_URL: !Ref OrderProcessingQueue
+      Code:
+        ZipFile: |
+          # Lambda function code would be here in a real template
+          # See receiver.py in the repository
+          
+  # Lambda function for processing orders
+  ProcessorFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "${EnvironmentName}-order-processor"
+      Runtime: python3.9
+      Handler: processor.lambda_handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      MemorySize: !Ref LambdaMemorySize
+      Timeout: !Ref LambdaTimeout
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref OrdersTable
+      Code:
+        ZipFile: |
+          # Lambda function code would be here in a real template
+          # See processor.py in the repository
+          
+  # Event source mapping to trigger processor from SQS
+  SQSEventSourceMapping:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      BatchSize: 10
+      Enabled: true
+      EventSourceArn: !GetAtt OrderProcessingQueue.Arn
+      FunctionName: !GetAtt ProcessorFunction.Arn
+      
+  # API Gateway REST API
+  OrdersApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Sub "${EnvironmentName}-orders-api"
+      Description: API for the decoupled order processing system
+      
+  # API Resource for orders
+  OrdersResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref OrdersApi
+      ParentId: !GetAtt OrdersApi.RootResourceId
+      PathPart: orders
+      
+  # POST Method for submitting orders
+  OrderPostMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref OrdersApi
+      ResourceId: !Ref OrdersResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ReceiverFunction.Arn}/invocations"
+      
+  # API Deployment
+  ApiDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: OrderPostMethod
+    Properties:
+      RestApiId: !Ref OrdersApi
+      StageName: !Ref EnvironmentName
+      
+  # Permission for API Gateway to invoke Lambda
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref ReceiverFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${OrdersApi}/*/${OrderPostMethod.HttpMethod}${OrdersResource.PathPart}"
+      
+  # CloudWatch Dashboard
+  OrderProcessingDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub "${EnvironmentName}-order-processing"
+      DashboardBody: !Sub |
+        {
+          "widgets": [
+            {
+              "type": "metric",
+              "width": 12,
+              "height": 6,
+              "properties": {
+                "metrics": [
+                  [ "AWS/SQS", "NumberOfMessagesReceived", "QueueName", "${OrderProcessingQueue}" ],
+                  [ ".", "NumberOfMessagesSent", ".", "." ],
+                  [ ".", "ApproximateNumberOfMessagesVisible", ".", "." ]
+                ],
+                "view": "timeSeries",
+                "region": "${AWS::Region}",
+                "title": "SQS Queue Metrics"
+              }
+            },
+            {
+              "type": "metric",
+              "width": 12,
+              "height": 6,
+              "properties": {
+                "metrics": [
+                  [ "AWS/Lambda", "Invocations", "FunctionName", "${ReceiverFunction}" ],
+                  [ ".", "Errors", ".", "." ],
+                  [ "AWS/Lambda", "Invocations", "FunctionName", "${ProcessorFunction}" ],
+                  [ ".", "Errors", ".", "." ]
+                ],
+                "view": "timeSeries",
+                "region": "${AWS::Region}",
+                "title": "Lambda Metrics"
+              }
+            }
+          ]
+        }
+
+Outputs:
+  ApiEndpoint:
+    Description: URL of

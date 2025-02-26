@@ -4,7 +4,8 @@ This repository demonstrates a serverless, decoupled architecture pattern using 
 
 ## Architecture Overview
 
-![Decoupled Architecture Diagram](images/architecture-diagram.png)
+
+![AWS-Decoupling-Services](https://github.com/user-attachments/assets/ca9c61c3-4b9d-4b30-b0bb-03c8ea90d962)
 
 This architecture showcases:
 - Frontend/backend decoupling with event-driven design

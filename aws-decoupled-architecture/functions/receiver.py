@@ -8,20 +8,29 @@ sqs = boto3.client('sqs')
 QUEUE_URL = os.environ['QUEUE_URL']
 
 def lambda_handler(event, context):
+    """
+    Lambda function that receives API Gateway requests and sends them to SQS.
+    
+    This function:
+    1. Validates incoming requests
+    2. Adds a unique message ID for tracing
+    3. Sends the request to an SQS queue
+    4. Returns a confirmation to the client
+    
+    Environment variables:
+    - QUEUE_URL: The URL of the SQS queue
+    """
     try:
-        # Parse request body
+        # Parse request body from API Gateway event
         if isinstance(event, dict) and 'body' in event:
-            # This is coming from API Gateway
-            if isinstance(event['body'], str):
-                request_body = json.loads(event['body'])
-            else:
-                request_body = event['body']
+            # Format from API Gateway
+            request_body = json.loads(event['body']) if isinstance(event['body'], str) else event['body']
         else:
-            # Direct invocation
+            # Direct invocation format
             request_body = event
         
-        # Validate request
-        if not request_body or not 'order_id' in request_body:
+        # Validate required fields
+        if not request_body or 'order_id' not in request_body:
             return {
                 'statusCode': 400,
                 'body': json.dumps({'message': 'Missing required fields'})
@@ -32,11 +41,12 @@ def lambda_handler(event, context):
         message = json.dumps(request_body)
         
         # Send message to SQS
-        response = sqs.send_message(
+        sqs.send_message(
             QueueUrl=QUEUE_URL,
             MessageBody=message
         )
         
+        # Return success response
         return {
             'statusCode': 200,
             'body': json.dumps({

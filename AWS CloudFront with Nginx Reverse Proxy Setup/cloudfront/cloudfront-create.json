@@ -1,0 +1,55 @@
+{
+  "CallerReference": "create-dist-12345",
+  "Comment": "Distribution for my static site",
+  "Enabled": true,
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3Origin",
+        "DomainName": "my-s3-bucket.s3.amazonaws.com",
+        "OriginPath": "",
+        "CustomHeaders": {
+          "Quantity": 0,
+          "Items": []
+        },
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3Origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": ["GET", "HEAD"]
+      }
+    },
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    },
+    "DefaultTTL": 86400,
+    "MaxTTL": 31536000,
+    "MinTTL": 0,
+    "Compress": true,
+    "SmoothStreaming": false
+  },
+  "PriceClass": "PriceClass_All",
+  "Comment": "My new CloudFront distribution",
+  "HttpVersion": "http2",
+  "IsIPV6Enabled": true
+}
+
+
+Usage:
+ 
+aws cloudfront create-distribution \
+  --distribution-config file://cloudfront-create.json

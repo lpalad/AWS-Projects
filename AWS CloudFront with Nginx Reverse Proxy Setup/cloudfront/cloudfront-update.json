@@ -1,0 +1,72 @@
+{
+  "CallerReference": "update-dist-56789",
+  "Comment": "Updated distribution config",
+  "Enabled": true,
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3Origin",
+        "DomainName": "my-s3-bucket.s3.amazonaws.com",
+        "OriginPath": "",
+        "CustomHeaders": {
+          "Quantity": 0,
+          "Items": []
+        },
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3Origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 7,
+      "Items": [
+        "GET","HEAD","OPTIONS","PUT","POST","PATCH","DELETE"
+      ],
+      "CachedMethods": {
+        "Quantity": 3,
+        "Items": ["GET","HEAD","OPTIONS"]
+      }
+    },
+    "ForwardedValues": {
+      "QueryString": true,
+      "Cookies": {
+        "Forward": "all"
+      },
+      "Headers": {
+        "Quantity": 2,
+        "Items": ["Host", "Referer"]
+      }
+    },
+    "SmoothStreaming": false,
+    "Compress": true,
+    "DefaultTTL": 86400,
+    "MaxTTL": 31536000,
+    "MinTTL": 0
+  },
+  "PriceClass": "PriceClass_All",
+  "HttpVersion": "http2",
+  "IsIPV6Enabled": true,
+
+  // Attach your WAF Web ACL here if needed
+  "WebACLId": "arn:aws:wafv2:us-east-1:123456789012:global/webacl/example-acl-id",
+
+  "Aliases": {
+    "Quantity": 1,
+    "Items": ["cdn.mycustomdomain.com"]
+  }
+}
+
+
+
+
+Usage (note the --if-match parameter requires the distribution’s ETag from aws cloudfront get-distribution):
+ 
+aws cloudfront update-distribution \
+  --id CLOUDFRONT_DISTRIBUTION_ID \
+  --if-match E2EXAMPLEETAG \
+  --distribution-config file://cloudfront-update.json

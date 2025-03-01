@@ -63,10 +63,9 @@ Price Class: Configurable
 SSL/TLS: SNI-only
 HTTP/2: Enabled
 Compression: Enabled
-Nginx Configuration
+## Nginx Configuration
 Basic reverse proxy configuration:
 
-nginx
 location / {
     proxy_pass http://[YOUR-S3-BUCKET-ENDPOINT];
     proxy_set_header Host $host;
@@ -80,7 +79,7 @@ CloudFront Metrics
 bash
 ./scripts/monitoring/cloudfront-metrics.sh
 
-Load Testing
+## Load Testing
 
 ./scripts/monitoring/load-test.sh
 Page Testing
@@ -94,14 +93,14 @@ HTTP to HTTPS redirection
 Custom headers
 Origin access restrictions
 Security group configurations
-Performance Optimization
+
+## Performance Optimization
 Cache behaviors configured
 Compression enabled
 TTL settings optimized
 Edge locations utilized
-Troubleshooting
-Common Issues
-Cache Miss
+
+![directory](docs/t.png)
 
 Check TTL settings
 Verify origin health
@@ -112,6 +111,7 @@ Check Nginx configurations
 SSL Issues
 
 ## Validate certificate setup
+
 Check SNI settings
 Maintenance
 Regular Tasks

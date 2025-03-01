@@ -1,10 +1,12 @@
-# AWS High-Availability Infrastructure Lab 
+# AWS High-Availability Infrastructure Lab
 
 ## The Problem We're Solving
-When your entire business runs on a single server, you're one crash away from disaster. This lab implements a fault-tolerant, auto-scaling infrastructure that eliminates single points of failure - the same solution Fortune 500 companies pay consultants $250,000+ to implement.
+
+When your entire business runs on a single server, you're one crash away from disaster. This lab implements a **fault-tolerant, auto-scaling infrastructure** that eliminates single points of failure—the same solution Fortune 500 companies pay consultants $250,000+ to implement.
 
 ## Architecture
-ascii
+
+```
                    AWS Cloud
 ┌──────────────────────────────────────────┐
 │  VPC (10.0.0.0/16)                      │
@@ -18,10 +20,11 @@ ascii
 │  │          S3 Website               │  │
 │  └────────────────────────────────────┘  │
 └──────────────────────────────────────────┘
+```
 
+## Project Structure
 
-
-Project Structure
+```
 aws-devops-journey/
 ├── infrastructure/
 │   └── terraform/
@@ -31,50 +34,55 @@ aws-devops-journey/
 │   └── sample-app/
 │       └── index.html      # Static website
 └── README.md
+```
 
+## Quick Start
 
-Quick Start
+### Initialize Terraform
 
-# Initialize Terraform
+```bash
 cd infrastructure/terraform
-
-
 terraform init
+```
 
-# Deploy infrastructure
+### Deploy Infrastructure
+
+```bash
 terraform plan -out=tfplan
 terraform apply tfplan
+```
 
+## Prerequisites
 
-# Prerequisites 
-AWS Account
-Terraform installed
-AWS CLI configured
+- **AWS Account**
+- **Terraform installed**
+- **AWS CLI configured**
 
+## Core Components
 
-# Core Components 
-VPC with proper networking
-Application Load Balancer for traffic distribution
-Multi-AZ deployment for high availability
-S3 static website hosting
-Security groups and access controls
+- **VPC** with proper networking
+- **Application Load Balancer** for traffic distribution
+- **Multi-AZ deployment** for high availability
+- **S3 static website hosting**
+- **Security groups** and access controls
 
+## Security Implementation
 
-# Security Implementation 
-Configured security groups
-S3 bucket policies
-Network access controls
+- **Configured security groups**
+- **S3 bucket policies**
+- **Network access controls**
 
+## Cost Optimization
 
-# Cost Optimization 
-Auto-scaling based on demand
-Pay-per-use model
-Resource optimization
+- **Auto-scaling based on demand**
+- **Pay-per-use model**
+- **Resource optimization**
 
+## License
 
-# Author
-Leonard S Palad
+MIT License
 
-LinkedIn: https://www.linkedin.com/in/leonardspalad/
-Blog: https://www.cloudhermit.com.au/
+## Author
 
+[Leonard Palad](https://www.linkedin.com/in/leonardspalad/)  
+[Blog](https://www.cloudhermit.com.au/)

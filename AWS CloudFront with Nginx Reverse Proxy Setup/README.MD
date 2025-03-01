@@ -1,141 +1,127 @@
-# Global-Content-Delivery-with-Amazon-CloudFront-and-S3
+Global Content Delivery with Amazon CloudFront
+Overview
+Implementation of global content delivery using AWS CloudFront with Nginx reverse proxy and S3 bucket origin. This lab demonstrates setting up a complete content delivery network with enhanced security and performance optimization.
 
-## Overview
-An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy serving content from S3 bucket. This solution provides global content delivery, enhanced security, and optimized performance.
+Implementation Phases
+PHASE 1: Infrastructure Verification
+EC2 Reverse Proxy Status
+VPC Configuration
+Security Group Settings
+Subnet Configuration
+PHASE 2: S3 Bucket Configuration
+Static Website Hosting
+Content Management
+Bucket Policies
+PHASE 3: CloudFront Distribution Setup
+Origin Configuration
+Cache Behavior Settings
+Distribution Settings
+PHASE 4: DNS and SSL Configuration
+Domain Setup
+SSL Certificate Implementation
+DNS Record Management
+PHASE 5: Security Implementation
+Security Group Rules
+Network Access Controls
+SSL/TLS Settings
+PHASE 6: Testing and Validation
+Distribution Testing
+Cache Behavior Verification
+Performance Monitoring
+AWS CLI Verification Commands
+bash
+# EC2 Instance Verification
+aws ec2 describe-instances --instance-ids [INSTANCE-ID]
 
-## Architecture
-![Architecture Diagram](docs/architect.png)
+# Security Group Verification
+aws ec2 describe-security-groups --filters Name=vpc-id,Values=[VPC-ID]
 
+# VPC Verification
+aws ec2 describe-vpcs --vpc-ids [VPC-ID]
 
-### Components
-- CloudFront Distribution
-- Nginx Reverse Proxy on EC2
-- S3 Static Website Hosting
-- CloudWatch Monitoring
-- Custom Domain Configuration
+# Subnet Verification
+aws ec2 describe-subnets --subnet-ids [SUBNET-ID]
+Nginx Configuration
+nginx
+server {
+    listen 80;
+    server_name [CLOUDFRONT-DOMAIN];
+    root /usr/share/nginx/html;
 
-## Features
-- Global content delivery through CloudFront
-- Automated testing and monitoring
-- Security-hardened setup
-- Cache optimization
-- Error handling
-- Performance metrics collection
+    location = / {
+        proxy_pass http://[S3-BUCKET-ENDPOINT]/high-availability.html;
+        proxy_set_header Host [S3-BUCKET-ENDPOINT];
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_redirect off;
+    }
 
-## Prerequisites
-- AWS Account with appropriate permissions
-- AWS CLI installed and configured
-- EC2 instance running Amazon Linux 2
-- Nginx server installed
-- Python 3.x and pip
-- Domain name (optional)
+    location / {
+        proxy_pass http://[S3-BUCKET-ENDPOINT]/;
+        proxy_set_header Host [S3-BUCKET-ENDPOINT];
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_redirect off;
+    }
+}
+Monitoring Scripts
+Page Testing Script
+bash
+#!/bin/bash
+CLOUDFRONT_DOMAIN="[YOUR-DISTRIBUTION-DOMAIN]"
+PAGES=(
+    "high-availability.html"
+    "iot-solutions.html"
+    "aws-outages.html"
+    "disclaimer.html"
+)
 
-
-## Quick Start
-1. Clone Repository
-
-git clone https://github.com/yourusername/aws-cloudfront-nginx-setup.git
-cd aws-cloudfront-nginx-setup
-
-2. Install Dependencies
-
-sudo yum install -y python3-pip python3-devel gcc
-sudo pip3 install cryptography
-sudo pip3 install --upgrade awscli
-
-3. Configure Nginx
- 
-sudo cp config/nginx/cloudfront.conf /etc/nginx/conf.d/
+echo "Testing CloudFront Distribution..."
+for page in "${PAGES[@]}"; do
+    echo -n "Testing $page: "
+    status=$(curl -s -o /dev/null -w "%{http_code}" https://$CLOUDFRONT_DOMAIN/$page)
+    if [ "$status" == "200" ]; then
+        echo "✅ OK ($status)"
+    else
+        echo "❌ Failed ($status)"
+    fi
+done
+Validation and Troubleshooting
+Nginx Validation
+bash
 sudo nginx -t
 sudo systemctl reload nginx
-
-4. Test Setup
+Log Monitoring
 bash
-./scripts/monitoring/test-pages.sh
-
-
-![directory](docs/directory.png)
-
-## Configuration
-CloudFront Distribution
-Default Root Object: index.html
-Price Class: Configurable
-SSL/TLS: SNI-only
-HTTP/2: Enabled
-Compression: Enabled
-## Nginx Configuration
-Basic reverse proxy configuration:
-
-location / {
-    proxy_pass http://[YOUR-S3-BUCKET-ENDPOINT];
-    proxy_set_header Host $host;
-    proxy_buffering off;
-    proxy_redirect off;
-}
-
-
-## Monitoring and Testing
-CloudFront Metrics
+sudo tail -f /var/log/nginx/access.log
+sudo tail -f /var/log/nginx/error.log
+CloudFront Testing
 bash
-./scripts/monitoring/cloudfront-metrics.sh
+curl -I https://[CLOUDFRONT-DOMAIN]
+Expected Response Headers:
 
-## Load Testing
-
-./scripts/monitoring/load-test.sh
-Page Testing
+x-cache: Hit from cloudfront
+x-amz-cf-pop: [EDGE-LOCATION]
+vary: Accept-Encoding
+Cache Management
 bash
-./scripts/monitoring/test-pages.sh
-
-
-## Security Features
-SSL/TLS encryption
-HTTP to HTTPS redirection
-Custom headers
-Origin access restrictions
-Security group configurations
-
-## Performance Optimization
-Cache behaviors configured
-Compression enabled
-TTL settings optimized
-Edge locations utilized
-
-![directory](docs/t.png)
-
-Check TTL settings
-Verify origin health
-403/404 Errors
-
-Verify S3 bucket permissions
-Check Nginx configurations
-SSL Issues
-
-## Validate certificate setup
-
-Check SNI settings
-Maintenance
-Regular Tasks
-Monitor CloudWatch metrics
-Review access logs
-Update security patches
-Perform cache invalidations
-
-
-##Cache Invalidation
-
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
+Security Notes
+All sensitive information has been replaced with [PLACEHOLDERS]
+Replace placeholders with your actual values before implementation
+Follow AWS security best practices for production deployments
+License
+MIT
 
-## License
-https://github.com/lpalad/AWS-Projects/blob/main/LICENSE
+Disclaimer
+This is a demonstration setup. Implement appropriate security measures for production environments.
 
 
-## Author 
-Leonard Palad
-Blog: https://www.cloudhermit.com.au/ 
-LinkedIn: https://www.linkedin.com/in/leonardspalad/
-
-
-## Acknowledgments
-AWS Documentation | Nginx Documentation |CloudFront Best Practices Guide
+Play
+Settings

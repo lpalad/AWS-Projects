@@ -31,60 +31,65 @@ An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy s
 - Domain name (optional)
 
 
-Quick Start
+## Quick Start
 1. Clone Repository
-bash
+
 git clone https://github.com/yourusername/aws-cloudfront-nginx-setup.git
 cd aws-cloudfront-nginx-setup
+
 2. Install Dependencies
-bash
+
 sudo yum install -y python3-pip python3-devel gcc
 sudo pip3 install cryptography
 sudo pip3 install --upgrade awscli
+
 3. Configure Nginx
-bash
+ 
 sudo cp config/nginx/cloudfront.conf /etc/nginx/conf.d/
 sudo nginx -t
 sudo systemctl reload nginx
+
 4. Test Setup
 bash
 ./scripts/monitoring/test-pages.sh
 
 
-Directory Structure
+## Directory Structure
 ![directory](docs/directory.png)
 
-Configuration
+## Configuration
 CloudFront Distribution
-Default Root Object: high-availability.html
-Price Class: All Edge Locations
+Default Root Object: index.html
+Price Class: Configurable
 SSL/TLS: SNI-only
 HTTP/2: Enabled
 Compression: Enabled
 Nginx Configuration
-Key settings in the reverse proxy:
+Basic reverse proxy configuration:
+
+nginx
+location / {
+    proxy_pass http://[YOUR-S3-BUCKET-ENDPOINT];
+    proxy_set_header Host $host;
+    proxy_buffering off;
+    proxy_redirect off;
+}
 
 
+## Monitoring and Testing
 CloudFront Metrics
 bash
 ./scripts/monitoring/cloudfront-metrics.sh
+
 Load Testing
-bash
+
 ./scripts/monitoring/load-test.sh
 Page Testing
 bash
 ./scripts/monitoring/test-pages.sh
-Validation
-Verify setup with:
 
-bash
-curl -I https://your-cloudfront-domain.net
-Expected response headers:
 
-x-cache: Hit from cloudfront
-x-amz-cf-pop: Edge Location ID
-vary: Accept-Encoding
-Security Features
+## Security Features
 SSL/TLS encryption
 HTTP to HTTPS redirection
 Custom headers
@@ -107,7 +112,7 @@ Verify S3 bucket permissions
 Check Nginx configurations
 SSL Issues
 
-Validate certificate setup
+## Validate certificate setup
 Check SNI settings
 Maintenance
 Regular Tasks
@@ -116,28 +121,21 @@ Review access logs
 Update security patches
 Perform cache invalidations
 
+
 Cache Invalidation
 
 aws cloudfront create-invalidation \
-    --distribution-id YOUR_DISTRIBUTION_ID \
+    --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
 
-Contributing
-Fork the repository
-Create feature branch
-Commit changes
-Push to branch
-Create Pull Request
 
-License
-MIT
-
-Author Leonard Palad
-
-Blog: https://www.cloudhermit.com.au/ LinkedIn: https://www.linkedin.com/in/leonardspalad/
+## Author 
+Leonard Palad
+Blog: https://www.cloudhermit.com.au/ 
+LinkedIn: https://www.linkedin.com/in/leonardspalad/
 
 
-Acknowledgments
+## Acknowledgments
 AWS Documentation
 Nginx Documentation
 CloudFront Best Practices Guide

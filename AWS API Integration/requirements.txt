@@ -1,0 +1,24 @@
+# API and HTTP requirements
+requests>=2.31.0
+urllib3>=2.0.7
+
+# Google API requirements
+google-api-python-client>=2.108.0
+google-auth>=2.23.4
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0
+
+# Data processing
+pandas>=2.1.3
+numpy>=1.24.3
+
+# Date and time handling
+python-dateutil>=2.8.2
+
+# Optional but recommended for security
+PyYAML>=6.0.1
+cryptography>=41.0.7
+
+# Development and testing (optional)
+pytest>=7.4.3
+python-dotenv>=1.0.0

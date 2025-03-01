@@ -2,8 +2,12 @@
 
 A **serverless solution** for processing IoT sensor data using AWS IoT Core, Lambda, and DynamoDB.
 
+
+
 ## Architect Design
 ![Architecture Diagram](docs/Screenshot_3.png)
+
+
 
 
 ## Project Overview
@@ -14,6 +18,8 @@ This project implements a **data pipeline** for processing sensor data with the 
 - **Lambda functions** for data processing
 - **DynamoDB** for data storage
 - **API Gateway** for data access
+
+
 
 ## Repository Structure
 
@@ -29,6 +35,8 @@ aws-iot-lambda/
 └── api/                    # API specifications
 ```
 
+
+
 ## Prerequisites
 
 - **AWS Account** with appropriate permissions
@@ -36,7 +44,11 @@ aws-iot-lambda/
 - **Python 3.9+**
 - **Node.js 14.x+** (for deployment scripts)
 
+
+
 ## Quick Start
+
+
 
 ### 1. Clone the Repository
 
@@ -45,15 +57,21 @@ git clone https://github.com/yourusername/aws-iot-lambda.git
 cd aws-iot-lambda
 ```
 
+
+
 ### 2. Follow Setup Guides
 
 - See **[Setup Requirements](./docs/setup/requirements.md)** for initial setup
 - Follow **[Certificate Setup](./docs/setup/certificates.md)** for IoT device setup
 - Review **[Policy Setup](./docs/setup/policy-setup.md)** for IAM configuration
 
+  
+
 ### 3. Deploy the Solution
 
+
 Run the deployment scripts following the documentation in the `setup` folder.
+
 
 ## Documentation
 
@@ -65,12 +83,14 @@ Run the deployment scripts following the documentation in the `setup` folder.
 - **[Monitoring](./docs/operations/monitoring.md)**
 - **[Troubleshooting](./docs/operations/troubleshooting.md)**
 
+
 ## Security
 
 - **All IoT devices require valid certificates**
 - **Lambda functions use least-privilege permissions**
 - **DynamoDB tables use encryption at rest**
 - **API endpoints implement proper authentication**
+
 
 ## Contributing
 
@@ -79,9 +99,11 @@ Run the deployment scripts following the documentation in the `setup` folder.
 3. **Commit changes**
 4. **Submit a Pull Request**
 
+
 ## License
 
 This project is licensed under the **MIT License** - see the `LICENSE` file for details.
+
 
 
 ## Author

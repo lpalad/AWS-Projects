@@ -4,7 +4,7 @@
 An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy serving content from S3 bucket. This solution provides global content delivery, enhanced security, and optimized performance.
 
 ## Architecture
-AWS CloudFront with Nginx Reverse Proxy Setup/docs/Purple Modern Metaverse Webinar Blog Banner (2).png
+
 
 ### Components
 - CloudFront Distribution

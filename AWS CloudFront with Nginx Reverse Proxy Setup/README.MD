@@ -32,3 +32,10 @@ Complete setup for CloudFront distribution with Nginx reverse proxy serving cont
 2. Run setup script:
    ```bash
    ./scripts/setup/install-dependencies.sh
+
+
+Author
+Leonard S Palad
+
+LinkedIn: https://www.linkedin.com/in/leonardspalad/
+Blog: https://www.cloudhermit.com.au/

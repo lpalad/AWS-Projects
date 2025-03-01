@@ -10,7 +10,7 @@ TSM_INSTALLATION_ID = 'YOUR_TSM_INSTALLATION_ID'  # Your TSM installation ID
 TSM_TOKEN = 'YOUR_TSM_API_TOKEN'  # Your TSM API access token
 
 # Installation Details
-INSTALLATION_NAME = 'TESS001 - POU0000806'  # Default installation name
+INSTALLATION_NAME = 'TESS001 - MachineName'  # Default installation name
 
 # API Endpoints
 BASE_URL = 'https://tsmapi.example.com/v2'  # Replace with actual TSM API base URL

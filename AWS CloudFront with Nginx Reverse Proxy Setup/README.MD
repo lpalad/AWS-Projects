@@ -1,4 +1,4 @@
-# Global Content Delivery with AWS CloudFront
+# AWS CloudFront with Nginx Reverse Proxy Setup
 
 ## Overview
 Implementation of global content delivery using AWS CloudFront with Nginx reverse proxy and S3 bucket origin. This lab demonstrates setting up a complete content delivery network with enhanced security and performance optimization.
@@ -14,19 +14,15 @@ Implementation of global content delivery using AWS CloudFront with Nginx revers
 ## EC2 Instance Verification
 ```bash
 aws ec2 describe-instances --instance-ids [INSTANCE-ID]
-
 Security Group Verification
 bash
 aws ec2 describe-security-groups --filters Name=vpc-id,Values=[VPC-ID]
-
 VPC Verification
 bash
 aws ec2 describe-vpcs --vpc-ids [VPC-ID]
-
 Subnet Verification
 bash
 aws ec2 describe-subnets --subnet-ids [SUBNET-ID]
-
 Nginx Configuration
 nginx
 location = / {
@@ -48,7 +44,6 @@ location / {
     proxy_buffering off;
     proxy_redirect off;
 }
-
 Monitoring Scripts
 Page Testing Script
 bash
@@ -69,12 +64,10 @@ for page in "${PAGES[@]}"; do
         echo "❌ Failed ($status)"
     fi
 done
-
 Validation and Troubleshooting
 bash
 sudo nginx -t
 sudo systemctl reload nginx
-
 Log Monitoring
 bash
 sudo tail -f /var/log/nginx/access.log
@@ -82,23 +75,19 @@ sudo tail -f /var/log/nginx/error.log
 CloudFront Testing
 bash
 curl -I https://[CLOUDFRONT-DOMAIN]
-
 Expected Response Headers
 x-cache: Hit from cloudfront
 x-amz-cf-pop: [EDGE-LOCATION]
 vary: Accept-Encoding
-
 Cache Management
 bash
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
-
 Security Notes
 All sensitive information has been replaced with [PLACEHOLDERS]
 Replace placeholders with your actual values
 Follow AWS security best practices for production deployments
-
 License
 MIT
 

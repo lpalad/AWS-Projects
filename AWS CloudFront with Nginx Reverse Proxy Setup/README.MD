@@ -35,3 +35,7 @@ Implementation of global content delivery using AWS CloudFront with Nginx revers
 * Distribution Testing
 * Cache Behavior Verification
 * Performance Monitoring
+
+## EC2 Instance Verification
+```bash
+aws ec2 describe-instances --instance-ids [INSTANCE-ID]

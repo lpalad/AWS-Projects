@@ -6,7 +6,7 @@ A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) da
 
 ```
                    +----------------------+
-                   |  External API (BESS)  |
+                   |  External API (TESS)  |
                    +----------------------+
                             |
                             v
@@ -25,7 +25,7 @@ A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) da
 
 ## 🚀 Features
 
-✅ **Fetch BESS Energy Data** - Retrieves real-time data from an external API  
+✅ **Fetch TESS Energy Data** - Retrieves real-time data from an external API  
 ✅ **AWS Lambda Ready** - Deployable as a serverless function  
 ✅ **DynamoDB Storage** - Efficient, scalable NoSQL database  
 ✅ **Google Sheets Integration** - Pushes processed data for live reports  
@@ -37,8 +37,8 @@ A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) da
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/BESS-Data-Collector.git
-cd BESS-Data-Collector
+git clone https://github.com/YOUR_USERNAME/TESS-Data-Collector.git
+cd TESS-Data-Collector
 ```
 
 ### 2️⃣ Install Python Dependencies
@@ -62,7 +62,7 @@ DYNAMODB_TABLE_NAME=your_table_name
 ### 4️⃣ Run Locally
 
 ```bash
-python bess.py
+python tess.py
 ```
 
 ### 5️⃣ Deploy to AWS Lambda
@@ -70,7 +70,7 @@ python bess.py
 ```bash
 zip -r deployment.zip . -x '*.git*'
 aws lambda update-function-code \
-  --function-name BESS_Data_Collector \
+  --function-name TESS_Data_Collector \
   --zip-file fileb://deployment.zip
 ```
 
@@ -78,7 +78,7 @@ aws lambda update-function-code \
 
 | Method | Endpoint               | Description                  |
 |--------|------------------------|------------------------------|
-| GET    | `/api/v1/bess-data`    | Fetch processed BESS data    |
+| GET    | `/api/v1/tess-data`    | Fetch processed TESS data    |
 | GET    | `/api/v1/gps-data`     | Fetch GPS heatmap data       |
 | POST   | `/api/v1/data`         | Upload new energy readings   |
 

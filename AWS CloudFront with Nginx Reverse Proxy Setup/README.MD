@@ -4,6 +4,8 @@
 
 Implementation of global content delivery using AWS CloudFront with Nginx reverse proxy and S3 bucket origin. This lab demonstrates setting up a complete content delivery network with enhanced security and performance optimization.
 
+![Architecture Diagram](docs/architect.png)
+
 ## Implementation Phases
 
 1. **PHASE 1**: Infrastructure Verification

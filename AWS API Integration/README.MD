@@ -1,122 +1,102 @@
-# AWS API Integration: The Untold Secret to Victory
+# TSM Data Collection and GPS Tracking
 
-A **serverless AWS Lambda solution** for fetching Power Energy Storage System (ESS) data, storing it in **Amazon DynamoDB**, and integrating with **Power BI** for real-time analytics.
-
-## 🏗 System Architecture
-
-```
-                   +----------------------+
-                   |  External API (TESS)  |
-                   +----------------------+
-                            |
-                            v
-                   +----------------------+
-                   |  AWS Lambda (Python)  |
-                   +----------------------+
-                            |
-        ----------------------------------------
-        |                                      |
-        v                                      v
-+-----------------+                      +-----------------+
-|  DynamoDB       |  <-- Stores Data --> | Power BI  |
-| (NoSQL Storage) |                      | (Live Reports) |
-+-----------------+                      +-----------------+
-```
+A **Python application** that collects data from the **TSM API**, tracks **GPS location data**, and stores power consumption metrics in **Google Sheets**.
 
 ## 🚀 Features
 
-✅ **Fetch TESS Energy Data** - Retrieves real-time data from an external API  
-✅ **AWS Lambda Ready** - Deployable as a serverless function  
-✅ **DynamoDB Storage** - Efficient, scalable NoSQL database  
-✅ **Power BI Integration** - Pushes processed data for live reports  
-✅ **GPS Data Support** - Collects and stores geolocation movement data  
-✅ **Security First** - Implements authentication, logging, and error handling  
+✅ **Fetches historical consumption data** from TSM API  
+✅ **Tracks GPS location data**  
+✅ **Stores data in Google Sheets**  
+✅ **Calculates daily power consumption metrics**  
+✅ **Supports battery and generator consumption tracking**  
 
-## 🛠 Installation & Setup
+## 🛠 Prerequisites
+
+- **Python 3.7+**
+- **Google Sheets API access**
+- **TSM API access**
+- Required Python packages (see `requirements.txt`)
+
+## ⚙️ Configuration
+
+Create a `config.py` file with the following structure:
+
+```python
+# Google Sheets Configuration
+SHEET_ID = 'YOUR_GOOGLE_SHEET_ID'
+CREDENTIALS_PATH = 'path/to/your/credentials.json'
+
+# TSM API Configuration
+TSM_INSTALLATION_ID = 'YOUR_TSM_INSTALLATION_ID'
+TSM_TOKEN = 'YOUR_TSM_API_TOKEN'
+```
+
+## 📂 Project Structure
+
+```
+project-root/
+├── src/
+│   ├── tess.py
+│   └── config.py
+├── credentials/
+│   └── google_credentials.json
+├── requirements.txt
+└── README.md
+```
+
+## 📥 Installation
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/TESS-Data-Collector.git
-cd TESS-Data-Collector
+git clone https://github.com/YOUR_USERNAME/TSM-Data-Collector.git
+cd TSM-Data-Collector
 ```
 
-### 2️⃣ Install Python Dependencies
+### 2️⃣ Install Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Configure Environment Variables
+### 3️⃣ Set Up Configuration Files
 
-Create a `.env` file in the root directory and add:
+Follow the **[Configuration](#-configuration)** section to set up your API keys and credentials.
 
-```ini
-API_INSTALLATION_ID=your_installation_id
-API_TOKEN=your_api_token
-AWS_REGION=your_aws_region
-DYNAMODB_TABLE_NAME=your_table_name
-```
+## ▶️ Usage
 
-### 4️⃣ Run Locally
+Run the main script:
 
 ```bash
-python tess.py
+python src/tess.py
 ```
 
-### 5️⃣ Deploy to AWS Lambda
+## 📊 Data Structure
+
+### **Main Sheet Columns**
+
+| Column Name       | Description                  |
+|------------------|------------------------------|
+| Date            | Timestamp of entry            |
+| Battery (kWh)   | Power consumed from battery   |
+| Generator (kWh) | Power generated               |
+| Consumption (kWh) | Total power consumed        |
+| Installation Name | TSM Installation Identifier |
+
+### **GPS Data Sheet Columns**
+
+| Column Name       | Description                  |
+|------------------|------------------------------|
+| Date            | Timestamp of GPS entry        |
+| Latitude        | GPS Latitude                  |
+| Longitude       | GPS Longitude                 |
+| Installation Name | TSM Installation Identifier |
+
+## 📦 Required Python Packages
 
 ```bash
-zip -r deployment.zip . -x '*.git*'
-aws lambda update-function-code \
-  --function-name TESS_Data_Collector \
-  --zip-file fileb://deployment.zip
+pip install pandas google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client requests
 ```
-
-## 📡 API Endpoints (Future Enhancement)
-
-| Method | Endpoint               | Description                  |
-|--------|------------------------|------------------------------|
-| GET    | `/api/v1/tess-data`    | Fetch processed TESS data    |
-| GET    | `/api/v1/gps-data`     | Fetch GPS heatmap data       |
-| POST   | `/api/v1/data`         | Upload new energy readings   |
-
-## 📜 Sample Code
-
-### Fetch External API Data
-
-```python
-import requests
-import os
-
-API_URL = "https://external-api.com/v2/installations"
-API_TOKEN = os.getenv("API_TOKEN")
-
-def get_api_data():
-    headers = {"x-authorization": f"Token {API_TOKEN}"}
-    response = requests.get(f"{API_URL}/stats", headers=headers)
-    return response.json()
-```
-
-### Store Data in DynamoDB
-
-```python
-import boto3
-import os
-
-dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table(os.getenv("DYNAMODB_TABLE_NAME"))
-
-def save_to_dynamodb(data):
-    table.put_item(Item=data)
-```
-
-## 🔒 Security Considerations
-
-🔹 **IAM Role Restrictions** - Lambda should have least privilege access  
-🔹 **Environment Variables** - Avoid hardcoding sensitive credentials  
-🔹 **API Gateway & Authentication** - Secure API access before exposing  
-🔹 **Monitoring & Logging** - Implement **CloudWatch logs** for tracking  
 
 ## 📜 License
 

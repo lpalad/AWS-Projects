@@ -1,4 +1,4 @@
-# AWS CloudFront with Nginx Reverse Proxy Setup
+# Global Content Delivery with Amazon CloudFront
 
 ## Overview
 

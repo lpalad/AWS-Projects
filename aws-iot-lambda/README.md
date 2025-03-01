@@ -92,14 +92,6 @@ Run the deployment scripts following the documentation in the `setup` folder.
 - **API endpoints implement proper authentication**
 
 
-## Contributing
-
-1. **Fork the repository**
-2. **Create a feature branch**
-3. **Commit changes**
-4. **Submit a Pull Request**
-
-
 ## License
 
 This project is licensed under the **MIT License** - see the `LICENSE` file for details.

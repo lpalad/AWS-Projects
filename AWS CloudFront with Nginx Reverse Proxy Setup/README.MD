@@ -3,6 +3,8 @@
 ## Overview
 Implementation of global content delivery using AWS CloudFront with Nginx reverse proxy and S3 bucket origin. This lab demonstrates setting up a complete content delivery network with enhanced security and performance optimization.
 
+![Architecture Diagram](docs/architect.png)
+
 ## Implementation Phases
 
 ### PHASE 1: Infrastructure Verification
@@ -133,16 +135,21 @@ aws cloudfront create-invalidation \
 
 
 
-### License
+## License
 Security Notes
 All sensitive information has been replaced with [PLACEHOLDERS]
 Replace placeholders with your actual values
 Follow AWS security best practices for production deployments
 
 
-### License
+## License License
 MIT
 
 ### License
 Disclaimer
 This is a demonstration setup. Implement appropriate security measures for production environments.
+
+Author Leonard S Palad
+
+LinkedIn: https://www.linkedin.com/in/leonardspalad/ 
+Blog: https://www.cloudhermit.com.au/

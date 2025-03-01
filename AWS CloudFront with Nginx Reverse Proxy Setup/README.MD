@@ -1,4 +1,4 @@
-# AWS CloudFront with Nginx Reverse Proxy Lab
+# Global-Content-Delivery-with-Amazon-CloudFront-and-S3
 
 ## Overview
 

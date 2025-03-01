@@ -142,7 +142,7 @@ To expand functionality:
 4. Update sheet range in write_to_sheet() if adding columns
 
 Additional features that can be added:
-- Generator consumption tracking
+- Fuel consumption tracking
 - Grid consumption tracking
 - Total power consumption calculation
 - GPS tracking

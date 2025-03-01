@@ -52,34 +52,7 @@ bash
 
 
 Directory Structure
-aws-cloudfront-nginx-setup/
-├── .github/
-│   └── workflows/
-│       └── test-pages.yml
-├── scripts/
-│   ├── monitoring/
-│   │   ├── cloudfront-metrics.sh
-│   │   ├── load-test.sh
-│   │   └── test-pages.sh
-│   └── setup/
-│       ├── install-dependencies.sh
-│       └── verify-setup.sh
-├── config/
-│   ├── nginx/
-│   │   ├── cloudfront.conf
-│   │   └── nginx.conf
-│   └── cloudfront/
-│       └── distribution-config.json
-├── docs/
-│   ├── setup.md
-│   ├── monitoring.md
-│   └── troubleshooting.md
-├── tests/
-│   └── integration/
-│       └── page-tests.sh
-├── .gitignore
-└── README.md
-
+![directory](docs/directory.png)
 
 Configuration
 CloudFront Distribution

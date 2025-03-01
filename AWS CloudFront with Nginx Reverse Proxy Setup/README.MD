@@ -124,8 +124,25 @@ x-amz-cf-pop: [EDGE-LOCATION]
 vary: Accept-Encoding
 
 
+### License
 Cache Management
 
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
+
+
+
+### License
+Security Notes
+All sensitive information has been replaced with [PLACEHOLDERS]
+Replace placeholders with your actual values
+Follow AWS security best practices for production deployments
+
+
+### License
+MIT
+
+### License
+Disclaimer
+This is a demonstration setup. Implement appropriate security measures for production environments.

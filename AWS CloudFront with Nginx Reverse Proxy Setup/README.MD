@@ -30,23 +30,7 @@ An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy s
 - Python 3.x and pip
 - Domain name (optional)
 
-## Available Content Pages
-```bash
-- Building-Enterprise-Grade-Applications-with-AWS-Lambda-and-SQS.html
-- CI-CD-AWS-S3.html
-- EXPOSED-The-AWS-Architecture-Secret-FAANG.html
-- The-Hidden-AWS-Scaling-Secret-That-Every-Cloud-Architect-Should-Know.html
-- Why-Your-AWS-IoT-Setup-is-Broken.html
-- api.html
-- aws-outages.html
-- canary-deployments.html
-- contact_us.html
-- disclaimer.html
-- github-s3-cicd.html
-- high-availability.html
-- iot-solutions.html
-- mastering-iot-api.html
-- privacy-policy.html
+
 Quick Start
 1. Clone Repository
 bash
@@ -65,6 +49,8 @@ sudo systemctl reload nginx
 4. Test Setup
 bash
 ./scripts/monitoring/test-pages.sh
+
+
 Directory Structure
 aws-cloudfront-nginx-setup/
 ├── .github/
@@ -93,6 +79,8 @@ aws-cloudfront-nginx-setup/
 │       └── page-tests.sh
 ├── .gitignore
 └── README.md
+
+
 Configuration
 CloudFront Distribution
 Default Root Object: high-availability.html
@@ -103,11 +91,7 @@ Compression: Enabled
 Nginx Configuration
 Key settings in the reverse proxy:
 
-nginx
-proxy_set_header Host aws.leonardspalad.com.s3-website-ap-southeast-2.amazonaws.com;
-proxy_buffering off;
-proxy_redirect off;
-Monitoring and Testing
+
 CloudFront Metrics
 bash
 ./scripts/monitoring/cloudfront-metrics.sh
@@ -158,27 +142,28 @@ Monitor CloudWatch metrics
 Review access logs
 Update security patches
 Perform cache invalidations
+
 Cache Invalidation
-bash
+
 aws cloudfront create-invalidation \
     --distribution-id YOUR_DISTRIBUTION_ID \
     --paths "/*"
+
 Contributing
 Fork the repository
 Create feature branch
 Commit changes
 Push to branch
 Create Pull Request
+
 License
 MIT
 
-Author
-Your Name
+Author Leonard Palad
 
-Support
-Create an issue
-Check documentation
-Review troubleshooting guide
+Blog: https://www.cloudhermit.com.au/ LinkedIn: https://www.linkedin.com/in/leonardspalad/
+
+
 Acknowledgments
 AWS Documentation
 Nginx Documentation

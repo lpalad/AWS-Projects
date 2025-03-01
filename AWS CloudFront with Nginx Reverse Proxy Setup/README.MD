@@ -39,3 +39,7 @@ Implementation of global content delivery using AWS CloudFront with Nginx revers
 ## EC2 Instance Verification
 ```bash
 aws ec2 describe-instances --instance-ids [INSTANCE-ID]
+
+## Security Group Verification
+```bash
+aws ec2 describe-security-groups --filters Name=vpc-id,Values=[VPC-ID]

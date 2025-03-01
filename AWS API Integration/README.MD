@@ -1,22 +1,24 @@
-AWS API Integration: The Untold Secret to Victory
+# 📌 BESS Data Collector
 
-This repository contains an AWS Lambda function that fetches Battery Energy Storage System (BESS) data from an external API, processes it, and stores it in DynamoDB. It also integrates Google Sheets for real-time reporting and includes GPS data processing for location tracking.
+## Overview  
+BESS Data Collector is an **AWS Lambda**-based solution that fetches **Battery Energy Storage System (BESS) data** from an **external API**, processes it, and stores it in **Amazon DynamoDB**. Additionally, it integrates with **Google Sheets** for real-time data reporting and supports **GPS data collection** for tracking energy assets.
 
-🏗 Architecture
-The following architecture outlines the data flow from the external API to DynamoDB and Google Sheets.
+---
 
-plaintext
-Copy
-Edit
+## 🏗 Architecture  
+
+The following **ASCII architecture diagram** illustrates the system flow:
+
+```plaintext
                    +---------------------+
                    |  External API       |
-                   | (Energy Data)       |
+                   |  (Energy Data)      |
                    +---------------------+
                             |
                             v
                    +----------------+
                    |  AWS Lambda     |
-                   | (Python Script) |
+                   |  (Python Script)|
                    +----------------+
                             |
         ---------------------------------------
@@ -27,14 +29,14 @@ Edit
 | (Storage Layer) |                      | (Report Layer) |
 +-----------------+                      +-----------------+
 🚀 Features
-✅ Data Retrieval: Fetches BESS energy stats and GPS data from an external API
-✅ AWS Lambda Ready: Deployable to AWS Lambda with IAM permissions
-✅ DynamoDB Storage: Stores processed data in DynamoDB for quick querying
-✅ Google Sheets Integration: Pushes processed data into a Google Sheet for reports
-✅ Error Handling & Logging: Robust error handling and logging for monitoring
+✔️ Data Retrieval: Fetches BESS energy stats and GPS data from an external API
+✔️ AWS Lambda Ready: Deployable as a serverless function
+✔️ DynamoDB Storage: Efficient, scalable NoSQL storage
+✔️ Google Sheets Integration: Pushes processed data for live reports
+✔️ Security & Logging: Implements error handling and logging for tracking
 
 🛠 Installation
-1️⃣ Clone the repository
+1️⃣ Clone the Repository
 bash
 Copy
 Edit
@@ -46,7 +48,7 @@ Copy
 Edit
 pip install -r requirements.txt
 3️⃣ Configure Environment Variables
-Create a .env file and add the following environment variables:
+Create a .env file in the root directory and add:
 
 ini
 Copy
@@ -70,12 +72,12 @@ zip -r deployment.zip . -x '*.git*'
 aws lambda update-function-code \
   --function-name BESS_Data_Collector \
   --zip-file fileb://deployment.zip
-📦 API Endpoints (Future Enhancement)
+📡 API Endpoints (Future Enhancement)
 Method	Endpoint	Description
 GET	/api/v1/bess-data	Fetch processed BESS data
 GET	/api/v1/gps-data	Fetch GPS heatmap data
 POST	/api/v1/data	Upload new energy readings
-📌 Sample Code
+🔧 Sample Code
 Fetch External API Data
 python
 Copy
@@ -102,9 +104,12 @@ table = dynamodb.Table(os.getenv("DYNAMODB_TABLE_NAME"))
 def save_to_dynamodb(data):
     table.put_item(Item=data)
 🔒 Security Considerations
-IAM Role Restrictions: Grant least privilege access to Lambda
-Environment Variables: Avoid hardcoding sensitive data
-API Gateway & Authentication: Secure API access before exposing
+🔹 IAM Role Restrictions: Lambda should have least privilege access
+🔹 Environment Variables: Avoid hardcoding sensitive credentials
+🔹 API Gateway & Authentication: Secure API access before exposing
+🔹 Monitoring & Logging: Implement CloudWatch logs for debugging
 📜 License
 This project is licensed under the MIT License.
 
+🤝 Contributing
+Contributions are welcome! Please submit a Pull Request or open an Issue to discuss changes.

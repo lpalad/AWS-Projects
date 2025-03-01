@@ -2,6 +2,10 @@
 
 A **serverless solution** for processing IoT sensor data using AWS IoT Core, Lambda, and DynamoDB.
 
+## Architect Design
+!(docs/Screenshot_3.png)
+
+
 ## Project Overview
 
 This project implements a **data pipeline** for processing sensor data with the following components:

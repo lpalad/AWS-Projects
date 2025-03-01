@@ -1,6 +1,6 @@
 # AWS API Integration: The Untold Secret to Victory
 
-A **serverless AWS Lambda solution** for fetching Battery Energy Storage System (BESS) data, storing it in **Amazon DynamoDB**, and integrating with **Google Sheets** for real-time analytics.
+A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) data, storing it in **Amazon DynamoDB**, and integrating with **Google Sheets** for real-time analytics.
 
 ## 🏗 System Architecture
 

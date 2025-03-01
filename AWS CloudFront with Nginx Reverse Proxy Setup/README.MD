@@ -127,7 +127,7 @@ aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
 
-License
+## License
 https://github.com/lpalad/AWS-Projects/blob/main/LICENSE
 
 

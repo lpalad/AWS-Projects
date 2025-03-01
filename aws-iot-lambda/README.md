@@ -79,13 +79,6 @@ Run the deployment scripts following the documentation in the `setup` folder.
 
 This project is licensed under the **MIT License** - see the `LICENSE` file for details.
 
-## Support
-
-For support:
-
-- Open an **issue** in this repository
-- Review the **[Troubleshooting Guide](./docs/operations/troubleshooting.md)**
-- Contact **project maintainers**
 
 ## Author
 

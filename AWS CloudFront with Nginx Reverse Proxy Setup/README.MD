@@ -44,12 +44,17 @@ aws ec2 describe-instances --instance-ids [INSTANCE-ID]
 ```bash
 aws ec2 describe-security-groups --filters Name=vpc-id,Values=[VPC-ID]
 
+
 VPC Verification
 ```bash
 aws ec2 describe-vpcs --vpc-ids [VPC-ID]
+
+
 Subnet Verification
 ```bash
 aws ec2 describe-subnets --subnet-ids [SUBNET-ID]
+
+
 Nginx Configuration
 nginx
 location = / {
@@ -77,13 +82,15 @@ Monitoring Scripts
 
 
 Page Testing Script
-```bash
+
 CLOUDFRONT_DOMAIN="[YOUR-DISTRIBUTION-DOMAIN]"
 PAGES=(
     "high-availability.html"
     "aws-outages.html"
     "disclaimer.html"
 )
+
+
 
 echo "Testing CloudFront Distribution..."
 for page in "${PAGES[@]}"; do
@@ -98,7 +105,7 @@ done
 
 
 Validation and Troubleshooting
-```bash
+
 sudo nginx -t
 sudo systemctl reload nginx
 
@@ -109,7 +116,7 @@ sudo tail -f /var/log/nginx/error.log
 
 
 CloudFront Testing
-```bash
+
 curl -I https://[CLOUDFRONT-DOMAIN]
 Expected Response Headers
 x-cache: Hit from cloudfront
@@ -118,7 +125,7 @@ vary: Accept-Encoding
 
 
 Cache Management
-```bash
+
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"

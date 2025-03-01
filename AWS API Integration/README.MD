@@ -1,6 +1,6 @@
 # AWS API Integration: The Untold Secret to Victory
 
-A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) data, storing it in **Amazon DynamoDB**, and integrating with **Google Sheets** for real-time analytics.
+A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) data, storing it in **Amazon DynamoDB**, and integrating with **Power BI** for real-time analytics.
 
 ## 🏗 System Architecture
 
@@ -18,7 +18,7 @@ A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) da
         |                                      |
         v                                      v
 +-----------------+                      +-----------------+
-|  DynamoDB       |  <-- Stores Data --> | Google Sheets  |
+|  DynamoDB       |  <-- Stores Data --> | Power BI  |
 | (NoSQL Storage) |                      | (Live Reports) |
 +-----------------+                      +-----------------+
 ```
@@ -28,7 +28,7 @@ A **serverless AWS Lambda solution** for fetching Energy Storage System (ESS) da
 ✅ **Fetch TESS Energy Data** - Retrieves real-time data from an external API  
 ✅ **AWS Lambda Ready** - Deployable as a serverless function  
 ✅ **DynamoDB Storage** - Efficient, scalable NoSQL database  
-✅ **Google Sheets Integration** - Pushes processed data for live reports  
+✅ **Power BI Integration** - Pushes processed data for live reports  
 ✅ **GPS Data Support** - Collects and stores geolocation movement data  
 ✅ **Security First** - Implements authentication, logging, and error handling  
 
@@ -54,7 +54,6 @@ Create a `.env` file in the root directory and add:
 ```ini
 API_INSTALLATION_ID=your_installation_id
 API_TOKEN=your_api_token
-SHEET_ID=your_google_sheets_id
 AWS_REGION=your_aws_region
 DYNAMODB_TABLE_NAME=your_table_name
 ```

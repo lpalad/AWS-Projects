@@ -4,7 +4,8 @@
 An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy serving content from S3 bucket. This solution provides global content delivery, enhanced security, and optimized performance.
 
 ## Architecture
-![Architecture Diagram](https://github.com/lpalad/AWS-Projects/commit/f0ef75c93609b786a614f316540e88ead72ddaaa)
+![Architecture Diagram](docs/architect.png)
+
 
 ### Components
 - CloudFront Distribution

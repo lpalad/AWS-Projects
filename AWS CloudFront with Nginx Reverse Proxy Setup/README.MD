@@ -127,4 +127,7 @@ MIT License
 
 ## Author
 
-[Leonard S Palad](https://www.linkedin.com/in/leonardspalad/)
+Leonard S Palad
+
+LinkedIn: https://www.linkedin.com/in/leonardspalad/
+Blog: https://www.cloudhermit.com.au/

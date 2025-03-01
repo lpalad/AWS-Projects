@@ -1,4 +1,4 @@
-# TSM Data Collection and GPS Tracking
+# AWS API Integration: The Untold Secret to Victory
 
 A **Python application** that collects data from the **TSM API**, tracks **GPS location data**, and stores power consumption metrics in **Google Sheets**.
 

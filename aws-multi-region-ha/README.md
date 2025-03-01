@@ -4,6 +4,12 @@
 This repository documents the implementation of a highly available, multi-region AWS infrastructure with global database replication and secure API access. 
 
 ## Architecture Highlights
+
+
+![Architecture Diagram](docs/aws-high-availability.png)
+
+
+
 - Multi-region deployment (ap-southeast-2 and us-west-2)
 - Aurora Global Database for data replication
 - Load-balanced web servers

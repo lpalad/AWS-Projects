@@ -1,8 +1,5 @@
 """
 Configuration file for TSM Data Collection Application
-IMPORTANT: Do not commit this file with actual credentials to version control
-Create a config.example.py for sharing the structure
-"""
 
 # Google Sheets Configuration
 SHEET_ID = 'YOUR_GOOGLE_SHEET_ID'  # ID from your Google Sheet URL

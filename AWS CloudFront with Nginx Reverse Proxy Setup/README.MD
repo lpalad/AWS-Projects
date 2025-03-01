@@ -4,9 +4,7 @@
 An enterprise-grade setup for CloudFront distribution with Nginx reverse proxy serving content from S3 bucket. This solution provides global content delivery, enhanced security, and optimized performance.
 
 ## Architecture
-![AWS-Decoupling-Services](https://github.com/user-attachments/assets/ca9c61c3-4b9d-4b30-b0bb-03c8ea90d962)
-
-https://github.com/lpalad/AWS-Projects/blob/06bc9890b73c45a9b9ed00e5734b648ddf76eac6/AWS%20CloudFront%20with%20Nginx%20Reverse%20Proxy%20Setup/docs/Purple%20Modern%20Metaverse%20Webinar%20Blog%20Banner%20(2).png
+![Architectuure Diagram] /docs/Purple Modern Metaverse Webinar Blog Banner (2).png
 
 ### Components
 - CloudFront Distribution

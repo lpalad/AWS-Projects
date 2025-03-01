@@ -1,62 +1,45 @@
-# Global Content Delivery with Amazon CloudFront
-
-## Overview
+Global Content Delivery with Amazon CloudFront
+Overview
 Implementation of global content delivery using AWS CloudFront with Nginx reverse proxy and S3 bucket origin. This lab demonstrates setting up a complete content delivery network with enhanced security and performance optimization.
 
-![Architecture Diagram](docs/architect.png)
-
-## Implementation Phases
-
-### PHASE 1: Infrastructure Verification
-* EC2 Reverse Proxy Status
-* VPC Configuration
-* Security Group Settings
-* Subnet Configuration
-
-### PHASE 2: S3 Bucket Configuration
-* Static Website Hosting
-* Content Management
-* Bucket Policies
-
-### PHASE 3: CloudFront Distribution Setup
-* Origin Configuration
-* Cache Behavior Settings
-* Distribution Settings
-
-### PHASE 4: DNS and SSL Configuration
-* Domain Setup
-* SSL Certificate Implementation
-* DNS Record Management
-
-### PHASE 5: Security Implementation
-* Security Group Rules
-* Network Access Controls
-* SSL/TLS Settings
-
-### PHASE 6: Testing and Validation
-* Distribution Testing
-* Cache Behavior Verification
-* Performance Monitoring
-
-## EC2 Instance Verification
-```bash
+Implementation Phases
+PHASE 1: Infrastructure Verification
+EC2 Reverse Proxy Status
+VPC Configuration
+Security Group Settings
+Subnet Configuration
+PHASE 2: S3 Bucket Configuration
+Static Website Hosting
+Content Management
+Bucket Policies
+PHASE 3: CloudFront Distribution Setup
+Origin Configuration
+Cache Behavior Settings
+Distribution Settings
+PHASE 4: DNS and SSL Configuration
+Domain Setup
+SSL Certificate Implementation
+DNS Record Management
+PHASE 5: Security Implementation
+Security Group Rules
+Network Access Controls
+SSL/TLS Settings
+PHASE 6: Testing and Validation
+Distribution Testing
+Cache Behavior Verification
+Performance Monitoring
+EC2 Instance Verification
+bash
 aws ec2 describe-instances --instance-ids [INSTANCE-ID]
-
-## Security Group Verification
-```bash
+Security Group Verification
+bash
 aws ec2 describe-security-groups --filters Name=vpc-id,Values=[VPC-ID]
-
-
 VPC Verification
-```bash
+bash
 aws ec2 describe-vpcs --vpc-ids [VPC-ID]
-
-
 Subnet Verification
-```bash
+bash
 aws ec2 describe-subnets --subnet-ids [SUBNET-ID]
-
-
 Nginx Configuration
 nginx
 location = / {
@@ -78,21 +61,15 @@ location / {
     proxy_buffering off;
     proxy_redirect off;
 }
-
-
 Monitoring Scripts
-
-
 Page Testing Script
-
+bash
 CLOUDFRONT_DOMAIN="[YOUR-DISTRIBUTION-DOMAIN]"
 PAGES=(
     "high-availability.html"
     "aws-outages.html"
     "disclaimer.html"
 )
-
-
 
 echo "Testing CloudFront Distribution..."
 for page in "${PAGES[@]}"; do
@@ -104,52 +81,42 @@ for page in "${PAGES[@]}"; do
         echo "❌ Failed ($status)"
     fi
 done
-
-
 Validation and Troubleshooting
-
+bash
 sudo nginx -t
 sudo systemctl reload nginx
-
 Log Monitoring
-```bash
+bash
 sudo tail -f /var/log/nginx/access.log
 sudo tail -f /var/log/nginx/error.log
-
-
 CloudFront Testing
-
+bash
 curl -I https://[CLOUDFRONT-DOMAIN]
 Expected Response Headers
 x-cache: Hit from cloudfront
 x-amz-cf-pop: [EDGE-LOCATION]
 vary: Accept-Encoding
-
-
-### License
 Cache Management
-
+bash
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
     --paths "/*"
-
-
-
-## License
+License
 Security Notes
 All sensitive information has been replaced with [PLACEHOLDERS]
 Replace placeholders with your actual values
 Follow AWS security best practices for production deployments
 
-
-## License License
+License License
 MIT
 
-### License
+License
 Disclaimer
 This is a demonstration setup. Implement appropriate security measures for production environments.
 
 Author Leonard S Palad
 
-LinkedIn: https://www.linkedin.com/in/leonardspalad/ 
+LinkedIn: https://www.linkedin.com/in/leonardspalad/
 Blog: https://www.cloudhermit.com.au/
+
+

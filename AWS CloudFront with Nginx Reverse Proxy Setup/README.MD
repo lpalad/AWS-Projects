@@ -3,6 +3,8 @@
 ## Overview
 
 This GitHub repository provides a fully tested and sanitized lab setup for deploying AWS CloudFront with an Nginx reverse proxy. The goal is to enable a high-availability, globally distributed content delivery network with enhanced security measures.
+
+
 ![Architecture Diagram](docs/architect.png)
 
 ## Implementation Phases

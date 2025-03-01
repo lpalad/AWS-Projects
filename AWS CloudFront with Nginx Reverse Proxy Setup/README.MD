@@ -54,7 +54,6 @@ bash
 ./scripts/monitoring/test-pages.sh
 
 
-## Directory Structure
 ![directory](docs/directory.png)
 
 ## Configuration
@@ -122,7 +121,7 @@ Update security patches
 Perform cache invalidations
 
 
-Cache Invalidation
+##Cache Invalidation
 
 aws cloudfront create-invalidation \
     --distribution-id [DISTRIBUTION-ID] \
@@ -136,6 +135,4 @@ LinkedIn: https://www.linkedin.com/in/leonardspalad/
 
 
 ## Acknowledgments
-AWS Documentation
-Nginx Documentation
-CloudFront Best Practices Guide
+AWS Documentation | Nginx Documentation |CloudFront Best Practices Guide

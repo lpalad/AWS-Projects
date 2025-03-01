@@ -1,4 +1,4 @@
-# AWS CloudFront with Nginx Reverse Proxy Setup
+# Global-Content-Delivery-with-Amazon-CloudFront-and-S3
 
 ## Overview
 Complete setup for CloudFront distribution with Nginx reverse proxy serving content from S3 bucket.

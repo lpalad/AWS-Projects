@@ -61,7 +61,7 @@ def process_data(raw_data, installation_name):
     data_rows = [
         ['Date', 'Battery (kWh)', 'Installation Name']
         # Add more columns here as needed
-        # Example: 'Generator (kWh)', 'Grid (kWh)', 'Total Used (kWh)'
+        # Example: 'Generator (kWh)', 'Grid (kWh)', 'Total Consumption (kWh)'
     ]
     
     daily_data = {}
@@ -134,15 +134,14 @@ if __name__ == "__main__":
     main()
 
 """
-Note: This is a condensed version focusing on battery consumption.
-To expand functionality:
+Note: This is a condensed version., but be sure you customise it based on your required API columns to expand functionality:
 1. Add more attribute codes in get_historical_data()
 2. Add corresponding columns in process_data()
 3. Modify data processing logic as needed
 4. Update sheet range in write_to_sheet() if adding columns
 
 Additional features that can be added:
-- Fuel consumption tracking
+- Generator consumption tracking
 - Grid consumption tracking
 - Total power consumption calculation
 - GPS tracking

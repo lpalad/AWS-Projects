@@ -1,4 +1,4 @@
-# THE 3-MINUTE API SOLUTION
+# THE 3-MINUTES API SOLUTION
 
 A **Python application** that collects data from the **TSM API**, tracks **GPS location data**, and stores power consumption metrics in **Google Sheets**.
 

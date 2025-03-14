@@ -6,7 +6,7 @@
 
 ## 📌 Overview
 
-The resources here enable you to deploy deploy a chatbot that calls Lambda in one region, accesses a DynamoDB table in another, and uses Cognito credentials to keep your AWS keys secure. This multi-service approach drastically reduces the overhead of building an AI-driven help desk. This is a hands-on lab for building an **Amazon Lex chatbot** that integrates with **Lambda, DynamoDB, and S3**—plus a local **cheat sheet** of blog content. It’s suitable for answering AWS documentation questions and personal blog queries.
+The resources here enable you to deploy a chatbot that calls Lambda in one region, accesses a DynamoDB table in another, and uses Cognito credentials to keep your AWS keys secure. This multi-service approach drastically reduces the overhead of building an AI-driven help desk. This is a hands-on lab for building an **Amazon Lex chatbot** that integrates with **Lambda, DynamoDB, and S3**—plus a local **cheat sheet** of blog content. It’s suitable for answering business web site  questions and personal blog queries.
 
 ## 📂 Repository Structure
 

@@ -1,21 +1,35 @@
-MIT License
+## 📜 License
 
-Copyright (c) 2025 Cloud Hermit Pty Ltd
+Copyright (c) 2025 **Cloud Hermit Pty Ltd**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights 
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+to **use, copy, modify, merge, publish, distribute, sublicense, and/or sell** 
 copies of the Software, and to permit persons to whom the Software is 
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in 
-all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be **included in 
+all copies or substantial portions of the Software.**
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
-THE SOFTWARE.
+---
+
+⚠️ **Disclaimer – Read Before Use!**
+
+THE SOFTWARE IS PROVIDED **"AS IS"**, WITHOUT ANY WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+
+- **NO GUARANTEES OF FUNCTIONALITY:** The Software may not work as intended, may contain errors, and may fail unexpectedly.
+- **NO FITNESS FOR PURPOSE:** The Software is not guaranteed to be suitable for any specific task or requirement.
+- **NO LIABILITY FOR DAMAGES:** Under no circumstances shall the authors, contributors, or copyright holders be liable for **any direct, indirect, incidental, special, exemplary, or consequential damages**, including but not limited to **loss of data, business interruption, security breaches, or system failures**, even if advised of the possibility of such damage.
+- **NO WARRANTY OF SECURITY:** The Software does not guarantee protection against cyber threats, vulnerabilities, or unauthorized access. Users are responsible for implementing security best practices.
+- **USE AT YOUR OWN RISK:** By using this Software, you acknowledge that you do so **entirely at your own risk**, and you accept full responsibility for any consequences.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+🚀 **Best Practices for Users:**
+- **Backup your data** before implementing any changes using this Software.
+- **Audit the code** to ensure compliance with your security policies.
+- **Regularly update dependencies** to mitigate vulnerabilities.
+- **Consult with professionals** before deploying in production-critical environments.
+
+By downloading, installing, or using this Software, you agree to the terms of this disclaimer. If you do not agree, **do not use the Software.**

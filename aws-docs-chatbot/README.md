@@ -1,4 +1,4 @@
-# AWS Documentation Chatbot – GitHub Documentation
+# AWS Lex Documentation Chatbot – GitHub Documentation
 
 ## Author
 **Leonard S Palad**  

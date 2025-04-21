@@ -47,7 +47,7 @@ Each project contains:
 - Best practices and security considerations
 
 ## Blog Posts
-Related blog posts can be found at: https://aws.leonardspalad.com/
+Related blog posts can be found at: https://www.cloudhermit.com.au
 
 ## Author
 Leonard S Palad

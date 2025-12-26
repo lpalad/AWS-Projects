@@ -62,6 +62,7 @@ Related blog posts can be found at: https://www.cloudhermit.com.au
 
 ## Author
 Leonard S Palad | MBA | Master of AI (In-progress)
+- AI Portfolio: https://salesconnect.com.au/aip.html
 - LinkedIn: https://www.linkedin.com/in/leonardspalad/
 - Blog: https://www.cloudhermit.com.au/
 

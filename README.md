@@ -61,7 +61,7 @@ Each project contains:
 Related blog posts can be found at: https://www.cloudhermit.com.au
 
 ## Author
-Leonard S Palad
+Leonard S Palad | MBA | Master of AI (In-progress)
 - LinkedIn: https://www.linkedin.com/in/leonardspalad/
 - Blog: https://www.cloudhermit.com.au/
 

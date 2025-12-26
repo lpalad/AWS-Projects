@@ -1,0 +1,3 @@
+[submodule "Terraform"]
+	path = Terraform
+	url = https://github.com/lpalad/salesconnect-ecs-terraform.git

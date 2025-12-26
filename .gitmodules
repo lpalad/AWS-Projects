@@ -1,3 +1,6 @@
 [submodule "Terraform"]
 	path = Terraform
 	url = https://github.com/lpalad/salesconnect-ecs-terraform.git
+[submodule "House-Price-Predictor"]
+	path = House-Price-Predictor
+	url = https://github.com/lpalad/house-price-predictor.git

@@ -7,16 +7,27 @@ This repository contains a collection of AWS projects, demonstrations, and tutor
 
 ## Categories
 
+### Terraform (Infrastructure as Code)
+- [ECS Fargate with Terraform](./Terraform/) - Production-grade AWS ECS deployment
+  - Modular Terraform (VPC, ALB, ECS, IAM, ECR)
+  - ECS Fargate with auto-scaling
+  - Application Load Balancer
+  - GitHub Actions CI/CD pipeline
+  - CloudWatch logging and monitoring
+
+### MLOps / Machine Learning
+- [House Price Predictor](./House-Price-Predictor/) - End-to-end MLOps learning project
+  - Data preprocessing and feature engineering
+  - Model training and experimentation
+  - MLflow tracking and versioning
+  - Jupyter notebook exploration
+
 ### CI/CD
-- [GitHub S3 Sync](./CI-CD/github-s3-sync/) -
--   Automated website deployment using GitHub Actions and S3
+- [GitHub S3 Sync](./CI-CD/github-s3-sync/) - Automated website deployment using GitHub Actions and S3
   - GitHub Actions workflow
   - S3 static website hosting
   - Secure credential management
   - Apache reverse proxy integration
-
-### Security
-*(Coming Soon)*
 
 ### IoT
 [AWS IoT Core - ANZ Air Quality Monitoring](https://github.com/lpalad/AWS-Projects/tree/main/IoT)
@@ -55,6 +66,8 @@ Leonard S Palad
 - Blog: https://www.cloudhermit.com.au/
 
 ## Updates
+- December 2025: Added Terraform ECS Fargate project with auto-scaling
+- December 2025: Added House Price Predictor MLOps project
 - February 2025: Added CI/CD pipeline with GitHub Actions and S3
 
 ## Note

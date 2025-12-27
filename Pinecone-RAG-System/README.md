@@ -190,6 +190,18 @@ docker run -p 8000:8000 --env-file .env pinecone-rag-system
 - **Query Latency**: 3-8 seconds (all features enabled)
 - **Cold Start**: ~5-10 seconds
 
+## Related Resources
+
+Related blog posts can be found at: https://www.cloudhermit.com.au
+
+## Author
+
+**Leonard S Palad** | MBA | Master of AI (In-progress)
+
+- AI Portfolio: https://salesconnect.com.au/aip.html
+- LinkedIn: https://www.linkedin.com/in/leonardspalad/
+- Blog: https://www.cloudhermit.com.au/
+
 ## License
 
 MIT License

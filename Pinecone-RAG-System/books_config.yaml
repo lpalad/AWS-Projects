@@ -1,0 +1,88 @@
+# Book Category Mappings for Pinecone Namespaces
+# Each book folder name maps to a namespace for organized retrieval
+
+# Books folder path (relative to project root)
+books_path: "Books"
+
+# Namespace mappings
+namespaces:
+  aws:
+    description: "AWS & Cloud Computing"
+    books:
+      - "AWS CookBook"
+      - "AWS Cloud Projects"
+      - "AWS for Solutions Architects - Third Edition"
+      - "AWS Certified Solutions Architect Study Guide with 900 Practice Test Questions, 4th Edition"
+      - "AWS Certified Machine Learning Study Guide"
+      - "AWS Certified Machine Learning Engineer Study Guide"
+      - "Data Science on AWS"
+      - "Generative AI on AWS"
+      - "Generative AI with Amazon Bedrock"
+      - "Programming AWS Lambda"
+
+  llm:
+    description: "LLM & AI Agents"
+    books:
+      - "AI Agents The Definitive Guide"
+      - "AI Agents with MCP"
+      - "Building Applications with AI Agents"
+      - "Building AI Agents with LLMs, RAG, and Knowledge Graphs"
+      - "Intelligent Autonmous Agents"
+      - "Designing Autonomous AI"
+      - "Hands-On LLM"
+      - "Hands On Large Language Models"
+      - "LLM Engineer's Handbook"
+      - "Building LLM Powered Applications"
+      - "Building LLMS for Production"
+      - "Building LLM From Scratch"
+      - "Prompt Engineering for LLMs"
+      - "RAG-Driven Generative AI"
+      - "A Simple Guide to Retrieval Augmented Generation"
+      - "Generative AI with LangChain - Second Edition"
+      - "Natural Language Processing with Transformers, Revised Edition"
+      - "Managing Memory for AI Agents"
+      - " Building Agentic AI- Workflows, Fine-Tuning, Optimization, and Deployment"
+      - "Building AI Intensive Python Applications"
+
+  mlops:
+    description: "MLOps & DevOps"
+    books:
+      - "MLOps Engineering at Scale"
+      - "What is LLMOps"
+      - "Essential Guide to LLMOps"
+      - "Automating DevOps with GitLab CI:CD Pipelines"
+      - "Fundamentals of DevOps and Software Delivery"
+
+  ml:
+    description: "ML Fundamentals"
+    books:
+      - "Deep Learning with PyTorch"
+      - "Deep Learning with Python, Third Edition"
+      - "Hands-On Machine Learning with Scikit-Learn and PyTorch"
+      - " Hands-On Machine Learning with Scikit-Learn and PyTorch"
+      - "Hands-On Machine Learning with Scikit-Learn, Keras,"
+      - "Designing Machine Learning Systems"
+      - "Generative AI with Python and PyTorch - Second Edition"
+      - "Feature Engineering Bookcamp"
+
+  arch:
+    description: "AI Architecture & Design"
+    books:
+      - "Generative AI Design Patterns"
+      - "Engeneering AI Systems"
+      - "AI Engineering"
+      - "AI Engineering Interviews"
+      - "Building AI-Powered Products"
+      - "Developing AI Applications"
+      - "Designing AI Interfaces"
+      - "AI Systems Performance Engineering"
+
+  python:
+    description: "Python Programming"
+    books:
+      - "Fluent Python, 2nd Edition"
+      - "Learning Python, 6th Edition"
+      - "Introducing Python, 3rd Edi"
+      - "Python Crash Course, 3rd Edition"
+      - "The Hitchhiker's Guide to Python"
+      - "High Performance Python, 3rd Edition "

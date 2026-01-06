@@ -1,5 +1,11 @@
 # AWS Projects Repository
 
+![Build with AWS](https://img.shields.io/badge/Build_with-AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+
+A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevOps, and architecture patterns. Each project includes documentation, code, and best practices.
+
+---
+
 ## Highlights
 
 - **Production RAG System** — 57 AI/ML books indexed with 80-95% retrieval relevance, deployed on Azure
@@ -53,11 +59,6 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
-
-## Overview
-A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevOps, and architecture patterns. Each project includes documentation, code, and best practices.
-
-![AWS Architecture](./aws.png)
 
 ## Projects
 

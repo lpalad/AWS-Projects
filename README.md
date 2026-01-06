@@ -124,6 +124,24 @@ A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevO
   - Lambda integration
   - Authentication and authorization
 
+## Project Structure
+
+```
+AWS-Projects/
+├── Pinecone-RAG-System/       # Production RAG with vector search
+├── House-Price-Predictor/     # MLOps pipeline with MLflow
+├── aws-docs-chatbot/          # AI documentation assistant
+├── Terraform/                 # ECS Fargate infrastructure
+├── CI-CD/                     # GitHub Actions pipelines
+├── aws-devops-journey/        # DevOps implementations
+├── Integration/               # CloudFront + Nginx setup
+├── aws-decoupled-architecture/# Event-driven microservices
+├── aws-multi-region-ha/       # Multi-region high availability
+├── IoT/                       # IoT Core air quality monitoring
+├── aws-iot-lambda/            # IoT event processing
+└── Setup/                     # API Gateway patterns
+```
+
 ## Blog Posts
 Related blog posts: https://www.cloudhermit.com.au
 

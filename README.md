@@ -1,5 +1,16 @@
 # AWS Projects Repository
 
+## Highlights
+
+- **Production RAG System** — 57 AI/ML books indexed with 80-95% retrieval relevance, deployed on Azure
+- **Infrastructure as Code** — Modular Terraform deploying ECS Fargate with auto-scaling and full CI/CD
+- **MLOps Pipeline** — End-to-end house price prediction with MLflow experiment tracking
+- **IoT Solution** — Real-time air quality monitoring across ANZ using AWS IoT Core + Lambda + DynamoDB
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-AI_Projects-FF6B6B?style=for-the-badge)](https://salesconnect.com.au/aip.html)
+
+---
+
 ## Tech Stack
 
 ### Cloud & Platform
@@ -58,9 +69,9 @@ A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevO
   - 80-95% relevance scores
 
 - [House Price Predictor](./House-Price-Predictor/) - End-to-end MLOps project
-  - Data preprocessing and feature engineering
-  - Model training and experimentation
-  - MLflow tracking and versioning
+  - Data preprocessing with 15+ engineered features
+  - XGBoost model with hyperparameter tuning
+  - MLflow tracking and model versioning
 
 - [AWS Docs Chatbot](./aws-docs-chatbot/) - AI-powered documentation assistant
   - Natural language querying
@@ -68,10 +79,10 @@ A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevO
 
 ### Infrastructure as Code
 - [Terraform ECS Fargate](./Terraform/) - Production-grade AWS ECS deployment
-  - Modular Terraform (VPC, ALB, ECS, IAM, ECR)
-  - ECS Fargate with auto-scaling
-  - GitHub Actions CI/CD pipeline
-  - CloudWatch logging and monitoring
+  - 5 modular Terraform components (VPC, ALB, ECS, IAM, ECR)
+  - ECS Fargate with CPU-based auto-scaling (2-10 tasks)
+  - Automated CI/CD via GitHub Actions
+  - CloudWatch logging and container health monitoring
 
 ### CI/CD & DevOps
 - [CI/CD Pipeline](./CI-CD/) - Automated deployment workflows
@@ -98,10 +109,10 @@ A collection of AWS and cloud projects demonstrating infrastructure, AI/ML, DevO
 
 ### IoT
 - [AWS IoT Core](./IoT/) - ANZ Air Quality Monitoring
-  - IoT Core broker setup
-  - Lambda Functions
-  - DynamoDB integration
-  - API Gateway
+  - IoT Core MQTT broker for real-time sensor data
+  - Lambda functions for data processing
+  - DynamoDB for time-series storage
+  - REST API via API Gateway
 
 - [AWS IoT Lambda](./aws-iot-lambda/) - IoT event processing
   - Lambda triggers from IoT events

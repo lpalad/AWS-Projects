@@ -32,7 +32,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[AWS Docs Chatbot](./aws-docs-chatbot/):** Natural language interface to official documentation. No more digging through manuals.
 
-### 2️⃣ Infrastructure & Architecture
+### ![2](https://img.shields.io/badge/2-32CD32?style=for-the-badge) Infrastructure & Architecture
 
 **[Terraform ECS Fargate](./Terraform/):** Five modular components (VPC, ALB, ECS, IAM, ECR). One command to deploy a high-availability environment.
 
@@ -42,17 +42,17 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[Decoupled Architecture](./aws-decoupled-architecture/):** Event-driven microservices. Components fail independently so the business keeps running.
 
-### 3️⃣ CI/CD & DevOps
+### ![3](https://img.shields.io/badge/3-32CD32?style=for-the-badge) CI/CD & DevOps
 
 **[CI-CD Pipeline](./CI-CD/):** GitHub Actions workflows for automated deployments. S3 sync for static hosting with secure credential management.
 
 **[AWS DevOps Journey](./aws-devops-journey/):** Documentation of DevOps practices and implementations. Real-world patterns, not theory.
 
-### 4️⃣ Networking & CDN
+### ![4](https://img.shields.io/badge/4-32CD32?style=for-the-badge) Networking & CDN
 
 **[CloudFront + Nginx Reverse Proxy](./AWS%20CloudFront%20with%20Nginx%20Reverse%20Proxy%20Setup/):** CloudFront distribution with Nginx backend. SSL/TLS configured properly. Content served fast from edge locations.
 
-### 5️⃣ API & Integration
+### ![5](https://img.shields.io/badge/5-32CD32?style=for-the-badge) API & Integration
 
 **[AWS API Integration](./AWS%20API%20Integration/):** REST API patterns using API Gateway and Lambda. Proper authentication, authorization, and error handling.
 

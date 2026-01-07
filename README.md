@@ -1,10 +1,26 @@
-<h1 align="center">⚡ The AWS Production Vault: 12 Architected Solutions. Zero Fluff.</h1>
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" width="120"/>
+</p>
 
-![Build with AWS](https://img.shields.io/badge/Build_with-AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+<h1 align="center">AWS Production Vault</h1>
 
-> "Most portfolios show tutorials. This one shows results. Twelve production-ready systems built to survive real-world chaos, not just pass a test."
+<p align="center">
+  <strong>12 production-ready solutions. Real infrastructure. Working code.</strong>
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-See_It_Working-FF6B6B?style=for-the-badge)](https://salesconnect.com.au/aip.html)
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Projects-12-32CD32?style=flat-square" alt="Projects"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License"/>
+  <a href="https://salesconnect.com.au/aip.html"><img src="https://img.shields.io/badge/Live_Demo-View-FF6B6B?style=flat-square" alt="Live Demo"/></a>
+</p>
 
 ---
 

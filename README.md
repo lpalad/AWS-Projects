@@ -24,7 +24,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 <h2 align="center">The Solutions: Real Problems. Solved.</h2>
 
-<h3 align="center">01: AI & Machine Learning</h3>
+### 01: AI & Machine Learning
 
 **[Pinecone RAG System](./Pinecone-RAG-System/):** A production-grade retrieval engine. Uses hierarchical semantic chunking and reranking to achieve 95% relevance scores.
 
@@ -32,7 +32,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[AWS Docs Chatbot](./aws-docs-chatbot/):** Natural language interface to official documentation. No more digging through manuals.
 
-<h3 align="center">02: Infrastructure & Architecture</h3>
+### 02: Infrastructure & Architecture
 
 **[Terraform ECS Fargate](./Terraform/):** Five modular components (VPC, ALB, ECS, IAM, ECR). One command to deploy a high-availability environment.
 

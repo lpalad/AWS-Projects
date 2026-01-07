@@ -42,6 +42,22 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[Decoupled Architecture](./aws-decoupled-architecture/):** Event-driven microservices. Components fail independently so the business keeps running.
 
+### 03: CI/CD & DevOps
+
+**[CI-CD Pipeline](./CI-CD/):** GitHub Actions workflows for automated deployments. S3 sync for static hosting with secure credential management.
+
+**[AWS DevOps Journey](./aws-devops-journey/):** Documentation of DevOps practices and implementations. Real-world patterns, not theory.
+
+### 04: Networking & CDN
+
+**[CloudFront + Nginx Reverse Proxy](./AWS%20CloudFront%20with%20Nginx%20Reverse%20Proxy%20Setup/):** CloudFront distribution with Nginx backend. SSL/TLS configured properly. Content served fast from edge locations.
+
+### 05: API & Integration
+
+**[AWS API Integration](./AWS%20API%20Integration/):** REST API patterns using API Gateway and Lambda. Proper authentication, authorization, and error handling.
+
+**[AWS IoT Lambda](./aws-iot-lambda/):** Event-driven IoT data transformation. Lambda triggers process and store sensor data automatically.
+
 ---
 
 <h2 align="center">Why Hire Me?</h2>
@@ -63,10 +79,16 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 AWS-Projects/
 ├── Pinecone-RAG-System/       # AI Retrieval — 80-95% Accuracy
 ├── House-Price-Predictor/     # MLOps Pipeline (XGBoost + MLflow)
+├── aws-docs-chatbot/          # AI Documentation Assistant
 ├── Terraform/                 # ECS Fargate (Auto-scaling Infrastructure)
 ├── IoT/                       # ANZ Air Quality Monitoring (Real Sensors)
 ├── aws-multi-region-ha/       # Disaster Recovery (Failover Logic)
-└── CI-CD/                     # Automated Deployment Workflows
+├── aws-decoupled-architecture/# Event-driven Microservices
+├── CI-CD/                     # Automated Deployment Workflows
+├── aws-devops-journey/        # DevOps Implementations
+├── AWS CloudFront.../         # CloudFront + Nginx Reverse Proxy
+├── AWS API Integration/       # API Gateway Patterns
+└── aws-iot-lambda/            # IoT Event Processing
 ```
 
 ---

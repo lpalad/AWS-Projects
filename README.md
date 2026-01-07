@@ -71,7 +71,7 @@ AWS-Projects/
 
 ---
 
-<h2 align="center">Tech Stack: Tools of Precision</h2>
+## Tech Stack: Tools of Precision
 
 <h3 align="center">Cloud & Platform</h3>
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)

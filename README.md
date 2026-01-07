@@ -24,7 +24,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 <h2 align="center">The Solutions: Real Problems. Solved.</h2>
 
-### 01: AI & Machine Learning
+### 1️⃣ AI & Machine Learning
 
 **[Pinecone RAG System](./Pinecone-RAG-System/):** A production-grade retrieval engine. Uses hierarchical semantic chunking and reranking to achieve 95% relevance scores.
 
@@ -32,7 +32,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[AWS Docs Chatbot](./aws-docs-chatbot/):** Natural language interface to official documentation. No more digging through manuals.
 
-### 02: Infrastructure & Architecture
+### 2️⃣ Infrastructure & Architecture
 
 **[Terraform ECS Fargate](./Terraform/):** Five modular components (VPC, ALB, ECS, IAM, ECR). One command to deploy a high-availability environment.
 
@@ -42,17 +42,17 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[Decoupled Architecture](./aws-decoupled-architecture/):** Event-driven microservices. Components fail independently so the business keeps running.
 
-### 03: CI/CD & DevOps
+### 3️⃣ CI/CD & DevOps
 
 **[CI-CD Pipeline](./CI-CD/):** GitHub Actions workflows for automated deployments. S3 sync for static hosting with secure credential management.
 
 **[AWS DevOps Journey](./aws-devops-journey/):** Documentation of DevOps practices and implementations. Real-world patterns, not theory.
 
-### 04: Networking & CDN
+### 4️⃣ Networking & CDN
 
 **[CloudFront + Nginx Reverse Proxy](./AWS%20CloudFront%20with%20Nginx%20Reverse%20Proxy%20Setup/):** CloudFront distribution with Nginx backend. SSL/TLS configured properly. Content served fast from edge locations.
 
-### 05: API & Integration
+### 5️⃣ API & Integration
 
 **[AWS API Integration](./AWS%20API%20Integration/):** REST API patterns using API Gateway and Lambda. Proper authentication, authorization, and error handling.
 

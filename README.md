@@ -1,4 +1,4 @@
-# ⚡ The AWS Production Vault: 12 Architected Solutions. Zero Fluff.
+<h1 align="center">⚡ The AWS Production Vault: 12 Architected Solutions. Zero Fluff.</h1>
 
 ![Build with AWS](https://img.shields.io/badge/Build_with-AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
 
@@ -44,7 +44,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 ---
 
-## Why Hire Me? (The Aggressive Evidence)
+## Why Hire Me?
 
 **I deploy business-critical assets. I don't play with toys.**
 

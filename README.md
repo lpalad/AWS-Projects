@@ -24,7 +24,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 <h2 align="center">The Solutions: Real Problems. Solved.</h2>
 
-### 1️⃣ AI & Machine Learning
+### ![1](https://img.shields.io/badge/1-32CD32?style=for-the-badge) AI & Machine Learning
 
 **[Pinecone RAG System](./Pinecone-RAG-System/):** A production-grade retrieval engine. Uses hierarchical semantic chunking and reranking to achieve 95% relevance scores.
 

@@ -8,7 +8,7 @@
 
 ---
 
-## Executive Summary: Engineering Profit through Data Rigor
+<h2 align="center">Executive Summary: Engineering Profit through Data Rigor</h2>
 
 In the Australian and New Zealand tech landscape, "good enough" is a liability. Companies need systems that scale without exploding the budget and AI that provides answers, not hallucinations.
 
@@ -22,9 +22,9 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 ---
 
-## The Solutions: Real Problems. Solved.
+<h2 align="center">The Solutions: Real Problems. Solved.</h2>
 
-### 01: AI & Machine Learning
+<h3 align="center">01: AI & Machine Learning</h3>
 
 **[Pinecone RAG System](./Pinecone-RAG-System/):** A production-grade retrieval engine. Uses hierarchical semantic chunking and reranking to achieve 95% relevance scores.
 
@@ -32,7 +32,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 **[AWS Docs Chatbot](./aws-docs-chatbot/):** Natural language interface to official documentation. No more digging through manuals.
 
-### 02: Infrastructure & Architecture
+<h3 align="center">02: Infrastructure & Architecture</h3>
 
 **[Terraform ECS Fargate](./Terraform/):** Five modular components (VPC, ALB, ECS, IAM, ECR). One command to deploy a high-availability environment.
 
@@ -44,7 +44,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 ---
 
-## Why Hire Me?
+<h2 align="center">Why Hire Me?</h2>
 
 **I deploy business-critical assets. I don't play with toys.**
 
@@ -57,7 +57,7 @@ With over a decade in the IT field and an MBA, I bridge the gap between technica
 
 ---
 
-## Project Structure (The Architecture)
+<h2 align="center">Project Structure (The Architecture)</h2>
 
 ```
 AWS-Projects/
@@ -71,9 +71,9 @@ AWS-Projects/
 
 ---
 
-## Tech Stack: Tools of Precision
+<h2 align="center">Tech Stack: Tools of Precision</h2>
 
-### Cloud & Platform
+<h3 align="center">Cloud & Platform</h3>
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
@@ -83,7 +83,7 @@ AWS-Projects/
 **AWS:** ECS, Fargate, Lambda, S3, CloudFront, IoT Core, API Gateway, Route53.
 **Azure:** Production deployment for RAG systems.
 
-### Infrastructure & DevOps
+<h3 align="center">Infrastructure & DevOps</h3>
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
@@ -93,7 +93,7 @@ AWS-Projects/
 **CI/CD:** GitHub Actions.
 **Containers:** Docker, ECR.
 
-### AI/ML & Data Processing
+<h3 align="center">AI/ML & Data Processing</h3>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge&logo=xgboost&logoColor=white)
@@ -103,14 +103,14 @@ AWS-Projects/
 **MLOps:** MLflow (Experiment & Model Tracking).
 **Vector DB:** Pinecone.
 
-### Frameworks & APIs
+<h3 align="center">Frameworks & APIs</h3>
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
 **Backend:** FastAPI, Python.
 **Web:** Nginx (Reverse Proxy), REST APIs.
 
-### Data Storage & Monitoring
+<h3 align="center">Data Storage & Monitoring</h3>
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
 ![S3](https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
 ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=for-the-badge&logo=amazoncloudwatch&logoColor=white)
@@ -120,7 +120,7 @@ AWS-Projects/
 
 ---
 
-## Usage: No-Nonsense Setup
+<h2 align="center">Usage: No-Nonsense Setup</h2>
 
 1. **Clone the Vault:**
    ```bash
@@ -138,7 +138,7 @@ AWS-Projects/
 
 ---
 
-## About Me: Leonard S Palad
+<h2 align="center">About Me: Leonard S Palad</h2>
 
 **MBA | Master of AI (In Progress)**
 

@@ -2,9 +2,7 @@
   <img src="https://img.shields.io/badge/Pinecone_RAG-No--Hallucination_AI._95%25_Retrieval_Accuracy.-32CD32?style=for-the-badge" alt="Pinecone RAG"/>
 </p>
 
-<p align="center">
-  <strong>Production-Grade Retrieval-Augmented Generation | Deployed on Microsoft Azure</strong>
-</p>
+<h3 align="center">Production-Grade Retrieval-Augmented Generation | Deployed on Microsoft Azure</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white" alt="Pinecone"/>

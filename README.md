@@ -24,7 +24,7 @@
 
 ---
 
-<h2 align="center">Executive Summary: Engineering Profit through Data Rigor</h2>
+<h2 align="center"><span style="color:#FFC72C">Executive Summary: Engineering Profit through Data Rigor</span></h2>
 
 In the Australian and New Zealand tech landscape, "good enough" is a liability. Companies need systems that scale without exploding the budget and AI that provides answers, not hallucinations.
 

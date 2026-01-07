@@ -24,7 +24,9 @@
 
 ---
 
-<h2 align="center"><span style="color:#FFC72C">Executive Summary: Engineering Profit through Data Rigor</span></h2>
+<p align="center">
+  <img src="https://img.shields.io/badge/Executive_Summary-Engineering_Profit_through_Data_Rigor-FFC72C?style=for-the-badge" alt="Executive Summary"/>
+</p>
 
 In the Australian and New Zealand tech landscape, "good enough" is a liability. Companies need systems that scale without exploding the budget and AI that provides answers, not hallucinations.
 

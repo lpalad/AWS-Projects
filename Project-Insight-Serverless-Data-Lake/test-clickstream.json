@@ -1,0 +1,3 @@
+{"event_id":"evt_manual_001","user_id":"usr_manual","user_ip":"10.0.xxx.xxx","timestamp":"2026-01-11T01:00:00Z","event_type":"purchase","page_url":"/manual-upload-test","session_id":"sess_manual","processed_at":"2026-01-11T01:00:00Z"}
+{"event_id":"evt_manual_002","user_id":"usr_manual","user_ip":"10.0.xxx.xxx","timestamp":"2026-01-11T01:00:01Z","event_type":"page_view","page_url":"/products","session_id":"sess_manual","processed_at":"2026-01-11T01:00:01Z"}
+{"event_id":"evt_manual_003","user_id":"usr_manual","user_ip":"10.0.xxx.xxx","timestamp":"2026-01-11T01:00:02Z","event_type":"add_to_cart","page_url":"/cart","session_id":"sess_manual","processed_at":"2026-01-11T01:00:02Z"}

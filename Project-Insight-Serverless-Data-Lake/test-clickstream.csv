@@ -1,0 +1,4 @@
+event_id,user_id,user_ip,timestamp,event_type,page_url,session_id,processed_at
+evt_csv_001,usr_csv,10.0.xxx.xxx,2026-01-11T02:00:00Z,purchase,/csv-upload-test,sess_csv,2026-01-11T02:00:00Z
+evt_csv_002,usr_csv,10.0.xxx.xxx,2026-01-11T02:00:01Z,page_view,/products-csv,sess_csv,2026-01-11T02:00:01Z
+evt_csv_003,usr_csv,10.0.xxx.xxx,2026-01-11T02:00:02Z,add_to_cart,/cart-csv,sess_csv,2026-01-11T02:00:02Z

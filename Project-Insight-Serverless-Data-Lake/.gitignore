@@ -1,0 +1,84 @@
+# AWS Credentials - NEVER COMMIT
+.aws/
+*.pem
+*.key
+credentials
+credentials.json
+.env
+.env.*
+.env.local
+.env.production
+aws-credentials*
+*-credentials.json
+
+# Terraform state (if using IaC)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# IDE and Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env/
+.venv/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Node.js (if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Local test outputs
+/output/
+/results/
+
+# Sensitive data patterns
+*secret*
+*password*
+*private*
+
+# Claude Code
+.claude/

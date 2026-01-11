@@ -32,7 +32,7 @@ My architecture is defined by three logical pillars:
 
 ---
 
-<h2 align="center">Why Hire Me? (The Aggressive Evidence)</h2>
+<h2 align="center">Why Hire Me?</h2>
 
 I deploy business-critical assets. I don't play with toys.
 
